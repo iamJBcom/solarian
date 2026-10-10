@@ -1,0 +1,7 @@
+© 2026 JB Bullock. Solarian — Open Technical Overview. Initial Public Issue 1.0, October 2026.
+
+The author's original content in this standalone companion publication is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+Attribution should identify JB Bullock, the publication title and released version, link to the canonical publication and licence, and indicate changes. Third-party content, if separately identified, is excluded unless expressly stated otherwise. This notice does not license the separate Solarian book or its complete artwork.
+
+STATUS: INITIAL PUBLIC ISSUE 1.0, OCTOBER 2026, conditional on author-approved public deployment. No standalone normative protocol publication or DOI is claimed.

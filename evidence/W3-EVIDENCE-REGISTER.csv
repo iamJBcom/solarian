@@ -1,0 +1,16 @@
+source_id,kind,document,sha256,status,url,executed_now
+S1,PRIMARY_PRIVATE_RECORD,Solarian-S2b4b3i2-Appendix-G-Integrated-Private-Manuscript.docx,62f9610ad138801fc33265b6bad993267164294d6eb7b7c6c28b77e3c4216d0d,Author-approved private manuscript with Appendix G; copyrighted book text,,False
+T1,PRIMARY_PRIVATE_RECORD,canonical-yearforms.v1-rc1.json,9083bf44f8b32a39cdf5bdf128e48552d32486a30ce341ab5cb4d25542f3d22a,DE440 planetary year-form candidate registry; finite-window profiles,,False
+T2,PRIMARY_PRIVATE_RECORD,criterion.v1.0.0.author-ratified.json,fd944671f90e6375e66df11b97e23b061d3f89c11dfeda21b19ed7c5d702f9ca,Phase fidelity bound 30°/45°; ratified policy,,False
+T3,PRIMARY_PRIVATE_RECORD,asteroid-joint-generator.v1.0.0.author-ratified.json,98b5dc62790b105494ceacf06b384b8466bed9dae61bf33710891bc6087ac0e8,Asteroid layout candidate-generator rule; author-ratified method only,,False
+T4,PRIMARY_PRIVATE_RECORD,asteroid-profile-governance.v1.0.0.author-ratified.json,37db88b6c5e81d29b80c310d89c95d282f9b75952158d1f63c4c73288d0730bb,Asteroid governance 11/6/2; no certified profiles,,False
+T5,PRIMARY_PRIVATE_RECORD,DR-procedures.v1.0.0.author-ratified.json,f1e4aa5e621ed428e2e8c5170caa8939642e5486af322f4e86f97b18e43fb727,DR review procedures; separate sign-offs,,False
+W2,PRIMARY_PRIVATE_RECORD,Solarian-W2-Private-Publishing-Website-Preview.zip,d268e8003ab2c903a35adc33d0fda1d36bc19958250a4244750257cc9d4868d7,Author-reviewed private website baseline,,False
+M1,SEPARATE_AUTHOR_PROJECT,Marian canonical architecture (12 months; 24 minths; 668/669 sols; shortened weekday positions),,Described from separate author-canonical record; no Marian normfile locally checked in W3,,False
+R1,EXTERNAL_PRIOR_ART,"Šurán, A Calendar for Mars, 1997",,Published historical design; complete-week precedent,https://doi.org/10.1016/S0032-0633(97)00033-0,False
+R2,EXTERNAL_PRIOR_ART,"Gangale, Martian Standard Time, JBIS 1986",,Published Darian calendar original,https://ops-alaska.com/time/gangale_mst/darian.htm,False
+R3,EXTERNAL_PRIOR_ART,"Gangale and Dudley-Rowley, Issues and Options for a Martian Calendar, 2005",,Published comparative review,https://doi.org/10.1016/j.pss.2005.07.012,False
+R4,EXTERNAL_PRIOR_ART,"Zubrin and Wagner, The Case for Mars, 1996",,Book-cited design context,,False
+R5,EXTERNAL_PRIOR_ART,"Silin, The Exodus Calendar, JBIS 2025",,Published calendar proposal,https://doi.org/10.59332/jbis-078-09-0305,False
+R6,EXTERNAL_PRIOR_ART,"Dershowitz & Reingold, Calendrical Calculations; Richards, Mapping Time",,General calendar history/algorithms from book bibliography,,False
+R7,EXTERNAL_PRIOR_ART,"US IRS Publication 538, 52-53-week tax year",,Public operating-calendar precedent,https://www.irs.gov/publications/p538,False
