@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="light" name="color-scheme"/><meta content="Read Appendix G — Outer Planets: From Idealised Orbits to Astronomical Reality, from the complete Solarian manuscript." name="description"/><title>Appendix G — Outer Planets: From Idealised Orbits to Astronomical Reality — Solarian</title><link href="../../assets/figures/image21.webp" rel="icon" type="image/webp"/><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/search-data.js"></script><script defer="" src="../../assets/site.js"></script><link rel="canonical" href="https://iamjbcom.github.io/solarian/book/read/45a-appendix-g-outer-planets-astronomical-reality.html"/><meta property="og:url" content="https://iamjbcom.github.io/solarian/book/read/45a-appendix-g-outer-planets-astronomical-reality.html"/></head><body class="reader-page" data-root="../../"><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="nav-shell"><a aria-label="Solarian home" class="logo" href="../../index.html"><span class="logo-mark">S<span class="mark-dot">.</span></span><span class="logo-word">SOLARIAN<span class="logo-caption">AN OPERATING CALENDAR</span></span></a><nav aria-label="Main navigation" class="primary-nav"><a href="../../book/index.html">Read the book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../evidence/index.html">Technical record</a><a href="../../research/index.html">Research &amp; Evaluation</a><a href="../../about/index.html">About</a></nav><div class="nav-actions"><button aria-label="Search the book" class="search-trigger" data-search-open="" type="button">⌕ <span>Search</span><kbd>/</kbd></button><button aria-expanded="false" aria-label="Toggle menu" class="hamburger" id="menu-toggle" type="button">☰</button></div></div><div class="mobile-nav" hidden="" id="mobile-nav"><a href="../../book/index.html">Read the book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../evidence/index.html">Technical record</a><a href="../../research/index.html">Research &amp; Evaluation</a><a href="../../about/index.html">About</a></div></header><div aria-labelledby="search-title" aria-modal="true" class="search-modal" hidden="" id="search-modal" role="dialog"><div class="search-panel"><div class="search-heading"><h2 id="search-title">Search Solarian</h2><button aria-label="Close search" data-search-close="" type="button">✕</button></div><input autocomplete="off" id="site-search" placeholder="Search any chapter or appendix…" type="search"/><div aria-live="polite" id="search-results"><p class="search-hint">Enter a word or phrase from the book.</p></div><div class="search-foot">Offline search · Complete manuscript · Press Esc to close</div></div></div><main class="reading-layout" id="main"><aside class="reading-rail"><div class="rail-header"><span class="rail-kicker">BOOK NAVIGATION</span><a href="../index.html">← All chapters</a></div><div class="rail-list"><a class="rail-item" href="39-appendix-a-solarian-protocol-v1-0.html"><span>Appendix A</span><span>Appendix A - Solarian Protocol v1.0</span></a><a class="rail-item" href="40-appendix-b-mathematical-basis-calendar-selection.html"><span>Appendix B</span><span>Appendix B - Mathematical Basis &amp; Calendar Selection</span></a><a class="rail-item" href="41-appendix-c-intercalation-expansion-joint-tables.html"><span>Appendix C</span><span>Appendix C - Intercalation &amp; Expansion-Joint Tables</span></a><a class="rail-item" href="42-appendix-d-interplanetary-geometry-the-month-gap-heuristic.html"><span>Appendix D</span><span>Appendix D - Interplanetary Geometry &amp; The Month-Gap Heuristic</span></a><a class="rail-item" href="43-appendix-e-comparative-calendars-design-context.html"><span>Appendix E</span><span>Appendix E - Comparative Calendars &amp; Design Context</span></a><a class="rail-item" href="44-appendix-f-sources-notes-bibliography.html"><span>Appendix F</span><span>Appendix F - Sources, Notes &amp; Bibliography</span></a><a class="rail-item is-active" href="45a-appendix-g-outer-planets-astronomical-reality.html"><span>Appendix G</span><span>Outer Planets: From Idealised Orbits to Astronomical Reality</span></a></div><div class="rail-bottom"></div></aside><div class="reading-main"><div class="reader-top"><a href="../index.html">← BOOK CONTENTS</a><span>APPENDIX G / G</span></div><div class="reader-article"><article><div class="eyebrow">Solarian · Appendices</div><h1>G — Outer Planets: From Idealised Orbits to Astronomical Reality</h1>
+<p><em>Orbital Variability, Civil Year Forms and Expansion Joints</em></p>
+<h2>G.1 The model and the orbit</h2>
+<p>Solarian begins with a simple proposition: a useful human calendar should not have to change its basic grammar every time humanity reaches a different world. The same twelve-minth mear, the same continuous seven-position week and the same distinction between human operating time and astronomical time can be used across very different planetary environments. Where the two calendars can be synchronized, the integer Repeat Factor connects them without making a Martian year, a Saturnian year and an Earth year pretend to be the same length.</p>
+<p>The worked calendars in the main book explain that architecture through an elegant idealised model. A planet has a representative orbital period; the calendar expresses that period in whole weeks; and the small difference between the astronomical year and the nominal structure is absorbed by the expansion joints. In the simplest version, two adjacent whole-week year lengths are sufficient to reproduce a constant average period over time. That is a sound mathematical explanation of the design.</p>
+<p>It is not, however, a complete description of the return intervals of actual planets. Real orbits evolve under the gravitational influence of other bodies. Moreover, Solarian defines the start of an astronomical year by a physical event: a crossing of its common heliocentric reference direction. It then assigns that crossing to the nearest permitted civil week boundary. Actual crossings, rather than an ideal timetable of alternating year lengths, determine the calendar dates.</p>
+<p>This appendix explains the difference. It does not revise Solarian's units or change the way its weeks, minths, mears and orbital months fit together. It explains why a real implementation may need a slightly larger catalogue of year forms than the two principal forms used to teach the system, and why Solarian's existing expansion-joint architecture is able to accommodate them.</p>
+<h2>G.2 Why the idealised two-form calendar is correct</h2>
+<p>Imagine a planet whose orbital period is perfectly constant at 1,536.53 standard weeks. Its civil calendar cannot contain a fractional week, but it can reproduce that average by using years of 1,536 and 1,537 weeks in appropriate proportions. In this idealised example, a little over half the years would use the longer form and a little under half would use the shorter form. The resulting long-run mean approaches 1,536.53 weeks.</p>
+<p>That is the original Saturn calculation. Thirty-two ordinary 48-week mears make 1,536 weeks, only about half a week away from the representative physical period. One additional week, placed at a designated expansion joint, gives the 1,537-week form. The model is exceptionally economical, and its underlying mathematics is not invalidated by anything that follows.</p>
+<p>What must be understood is the scope of the result. <strong>Two adjacent whole-week lengths can reproduce a specified constant average. They are not a guarantee that every interval between real, independently dated astronomical crossings will have one of those two lengths.</strong> The percentages in the idealised Saturn example describe an arithmetic mixture, not a measured frequency of the actual Saturnian year forms.</p>
+<p>The distinction matters because Solarian makes a deliberate choice about what is authoritative. The mean orbital period helps us choose a sensible Repeat Factor and explain the calendar. The actual planetary crossing determines the beginning of a particular astronomical year. If the two disagree slightly, the implementation follows the astronomy.</p>
+<h2>G.3 What changes when we measure a real orbit</h2>
+<p>A planet's orbit is not the unchanging ellipse of a classroom diagram. Every major planet is affected by the other planets, and the trajectory of a planetary system is not a sequence of exactly identical laps. Even if we specify a single fixed direction in space, the time between two successive returns to that direction will not necessarily be the same as the time between the next pair.</p>
+<p>Solarian uses a common heliocentric 100° reference ray. Its astronomical implementation finds successive crossings of that ray using a specified planetary target, reference frame and ephemeris. Each crossing is then assigned independently to the nearest permitted week boundary. The distance between the two resulting civil boundaries is the length of that particular Solarian orbital year.</p>
+<p>There are thus two related sources of variation. First, the physical time between successive crossings can change. Second, the two physical crossings may fall at different positions within their respective civil weeks. Rounding both endpoints independently may add a fraction of a week to the resulting civil interval or take a fraction away.</p>
+<p>This is not the same as taking one average orbital duration and rounding that duration once. The physical start and end are separate events. A calendar that claims to follow them must respect both.</p>
+<p>Jupiter offers a compact illustration. One return measured in the tested ephemeris takes approximately 619.058 weeks. The corresponding civil start lies about 3.17 days before the physical crossing, while the civil end lies about 3.42 days after the next crossing. Those endpoint differences turn an astronomical interval of just over 619 weeks into a <strong>620-week civil year</strong>. No additional physical days have appeared. The calendar has simply rounded two different events to the week boundaries required by its design.</p>
+<p>The week itself remains continuous. Monday does not disappear, repeat or move. Only the counted number of complete weeks between two correctly positioned civil New Years changes.</p>
+<h2>G.4 Saturn: the revealing example</h2>
+<p>Saturn makes the implications unusually clear because its nominal Solarian structure is so neat. It uses Repeat Factor R32. One orbital year contains 32 mears, or 384 minths, and each of the twelve orbital months contains 32 minths. With every minth at its ordinary four weeks, the complete calendar contains exactly 1,536 weeks.</p>
+<p>In the idealised explanation, the problem appears to have been solved with a 1,536-week Common Year and a 1,537-week Leap Year. But a test of the actual 100° crossings using the JPL DE440 planetary ephemeris found more variety. Across 33 complete Saturnian orbital years in the approximately 1600–2600 test window, successive <em>physical</em> returns ranged from about <strong>1,535.390 to 1,538.665 standard weeks</strong>. That is a spread of nearly 23 Earth days in the astronomical return intervals themselves.</p>
+<p>After each crossing was assigned to its nearest permitted civil week boundary, the observed civil years were:</p>
+<table>
+<thead>
+<tr>
+<th>Civil year length</th>
+<th style="text-align:right">Years observed</th>
+<th>Adjustment from 1,536-week nominal year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1,535 weeks</td>
+<td style="text-align:right">1</td>
+<td>Contract one week</td>
+</tr>
+<tr>
+<td>1,536 weeks</td>
+<td style="text-align:right">6</td>
+<td>No adjustment</td>
+</tr>
+<tr>
+<td>1,537 weeks</td>
+<td style="text-align:right">15</td>
+<td>Expand one week</td>
+</tr>
+<tr>
+<td>1,538 weeks</td>
+<td style="text-align:right">9</td>
+<td>Expand two weeks</td>
+</tr>
+<tr>
+<td>1,539 weeks</td>
+<td style="text-align:right">2</td>
+<td>Expand three weeks</td>
+</tr>
+</tbody>
+</table>
+<p>These figures do not imply that a Saturnian year is suddenly shortened or lengthened by four weeks at once. Four weeks is the difference between the shortest and longest civil forms observed in this sample. Relative to the nominal 1,536-week structure, the largest adjustment for any one observed year is only three weeks.</p>
+<p>That is where the expansion-joint system earns its place. A 1,539-week year needs three additional weeks distributed among the year's 384 minths. In the simplest permitted arrangement, three designated terminal minths can each expand from four weeks to five. A 1,535-week year needs one designated contraction from four weeks to three. The precise positions belong to the published implementation profile, not to an improvised decision by the people using the calendar.</p>
+<p>For the most expanded observed form, three adjusted minths represent <strong>less than one per cent of the 384-minth year</strong>. The remaining 381 minths keep their normal four-week duration. The twelve orbital months still exist, each still contains 32 minths, and all year and month boundaries remain aligned to whole weeks.</p>
+<p>There is another practical benefit in the scale. A Saturnian orbital year lasts almost thirty Earth years. Its few necessary adjustments can be allocated across that immense interval rather than crowded into a short human operating cycle. A resident need not repeatedly reorganise the working calendar. The familiar four-week minth and twelve-minth mear remain the dominant lived experience.</p>
+<p>It would nevertheless be misleading to say that additional year forms are necessarily rare <em>per Saturnian orbit</em>. In this limited DE440 sample, several of the non-principal forms occur repeatedly. What is infrequent on a human timescale is the completion of a Saturnian orbital year itself. The distinction reinforces the argument more accurately than a general claim that exceptional forms almost never occur.</p>
+<p>An outer-planet calendar therefore needs to handle a small number of possible whole-week corrections across an extraordinary number of otherwise ordinary weeks. This is a modest scheduling problem, not a redesign of civil time.</p>
+<h2>G.5 The same effect at Jupiter, Uranus and Neptune</h2>
+<p>The other giant planets show the same principle, although not to the same degree. The DE440 calculations tested a bounded sequence of crossings for each planetary system, using the calendar's common reference direction and its fixed whole-week assignment rule.</p>
+<table>
+<thead>
+<tr>
+<th>Planetary system</th>
+<th>Main-book example forms</th>
+<th>Additional forms observed</th>
+<th style="text-align:right">Complete years tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jupiter, R13</td>
+<td>618 and 619 weeks</td>
+<td>620 weeks</td>
+<td style="text-align:right">83</td>
+</tr>
+<tr>
+<td>Saturn, R32</td>
+<td>1,536 and 1,537 weeks</td>
+<td>1,535, 1,538 and 1,539 weeks</td>
+<td style="text-align:right">33</td>
+</tr>
+<tr>
+<td>Uranus, R91</td>
+<td>4,383 and 4,384 weeks</td>
+<td>4,385 weeks</td>
+<td style="text-align:right">11</td>
+</tr>
+<tr>
+<td>Neptune, R179</td>
+<td>8,598 and 8,599 weeks</td>
+<td>8,600 weeks</td>
+<td style="text-align:right">5</td>
+</tr>
+</tbody>
+</table>
+<p>These are observed forms in the tested astronomical model, not a declaration that no other form could ever occur. The number of complete outer-planet orbits covered by a millennium naturally becomes smaller as the orbital period grows. Five measured Neptune years, in particular, are enough to demonstrate that a two-form list is not exhaustive, but not enough to assign dependable frequencies to its different forms.</p>
+<p>The Jupiter example shows how a small change in the timing of successive crossings, combined with independent week rounding, can introduce a third civil length. Uranus and Neptune show that even very large Repeat Factors do not make the physical return interval absolutely constant. Saturn provides the broadest observed spread in this particular test; it should not be taken as a universal upper bound for outer-planet variability.</p>
+<p>The result is six additional distinct planetary year forms beyond the principal published pairs in the tested synchronized profiles. These forms have been incorporated into a separately versioned technical release-candidate catalogue. That catalogue preserves the original worked forms and supplies exact additional minth and month allocations where they were required by the observations. It is evidence for a reproducible implementation, not an all-time promise about planetary motion.</p>
+<h2>G.6 The expansion joints are there for this reason</h2>
+<p>Solarian's expansion joints were introduced to solve precisely the general problem of combining a stable human operating structure with an astronomical period that does not divide perfectly into four-week minths. The real-orbit results ask a little more of that existing mechanism, not something fundamentally different.</p>
+<p>The sequence of decisions is important. An implementation first identifies the real astronomical crossing under its specified reference model. It assigns that event to the nearest permissible civil week boundary. It does the same for the next crossing, thereby obtaining an exact integer number of weeks for the civil year. Only then does it select the registered year form that contains precisely that many weeks.</p>
+<p>The internal form uses the same recognised architecture: twelve orbital months, integer Repeat Factor where synchronization applies, twelve minths per mear, and three-, four- or five-week minths at approved adjustment positions. Primary joints, usually the terminal Minth L of a mear, absorb the difference wherever possible. Secondary positions remain available in profiles that require them. Their placement must be predetermined, deterministic and published, so two independent implementations construct the same dates.</p>
+<p>An ordinary reader does not need to know the planetary ephemeris to find a date, any more than an Earth calendar user needs to compute an equinox to arrange a meeting. The astronomical work belongs in the implementation tables and reference software. Residents see the stable calendar generated from those rules.</p>
+<p>The terminology also remains consistent. In Solarian, a <strong>Common Year</strong> has an even number of civil weeks and a <strong>Leap Year</strong> has an odd number. Leap does not mean longer. Saturn can therefore have more than one Common form and more than one Leap form, with each distinguished by its exact week count. The word <em>Leap</em> alone is not a complete instruction for selecting a year's internal layout.</p>
+<p>If a newly computed year length is not covered by the published profile, an implementation must not guess a pattern or silently borrow a different form with the same parity. It needs a reproducible, versioned extension of the profile. Once issued, that extension fixes the adjustment locations and preserves the previously published date records. This is how astronomical fidelity and deterministic civil time remain compatible.</p>
+<h2>G.7 A more defensible astronomical calendar</h2>
+<p>This problem is not peculiar to Solarian. Any civil calendar that aims to stay aligned with actual astronomical events must confront the difference between idealised repeating cycles and physical motion. Different calendars may respond through intercalation, approximations, periodic recalibration, astronomical calculation or an accepted drift between civil dates and the phenomena they describe. There is no requirement that every calendar use Solarian's solution. There is, however, no exemption from the underlying astronomical reality for a calendar that claims to follow it.</p>
+<p>Solarian's design choice is to preserve the astronomical reference and the continuous civil week, while allowing controlled changes in the lengths of designated minths. Its units, naming grammar, synchronised relationship between mears and orbital months, and week-aligned boundaries survive that choice. The real-orbit calculations therefore refine our understanding of the implementation without overturning the model that made it intelligible.</p>
+<p>There are boundaries to the claim. The results above come from a specified ephemeris and a finite historical test window. They do not certify all future crossings, all model uncertainties or the astronomical applicability of every small body in the Solar System. The separately published technical protocol must provide the authoritative reference conventions, exact registered year forms, dated schedules, software tests and version history. Those records can develop as better astronomical data become available without repeatedly rewriting the conceptual account of the calendar.</p>
+<p>The central distinction is worth keeping clear. <strong>The idealised model explains why the architecture works. The physical orbit determines where its real astronomical years begin and end. The expansion joints reconcile the two.</strong></p>
+<p>A calendar should not require a planet to complete the same mathematically convenient orbit forever. Solarian does not. It takes the cleaner route: retain the simple structure, tell the astronomical truth, and absorb the small differences in the places specifically designed to handle them. That is a modest implementation complication—and a stronger foundation for a calendar intended to last across worlds and generations.</p>
+</article></div><div class="reader-actions"><button class="bookmark" data-bookmark="book/read/45a-appendix-g-outer-planets-astronomical-reality.html" type="button">☆ Save reading position</button><button aria-label="Increase text size" class="reading-size" data-font-up="" type="button">Aa +</button><button aria-label="Decrease text size" class="reading-size" data-font-down="" type="button">Aa −</button></div><nav aria-label="Adjacent sections" class="reader-pager"><a class="pager-link prev" href="44-appendix-f-sources-notes-bibliography.html"><span class="pager-label">← PREVIOUS</span><strong>Appendix F - Sources, Notes &amp; Bibliography</strong></a><a class="pager-link next" href="45-technical-record.html"><span class="pager-label">NEXT →</span><strong>TECHNICAL RECORD</strong></a></nav></div></main><footer class="site-footer"><div class="footer-inner"><div><div class="footer-logo">SOLARIAN<span class="gold">.</span></div><p>One grammar. Many calendars.</p><small>Book text and artwork © JB Bullock 2026. All rights reserved.</small></div><div class="footer-links"><a href="../../book/index.html">Book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../rights/index.html">Rights &amp; licensing</a></div></div><div class="footer-base">First Public Web Edition 1.0 · October 2026 · Book and original illustrations © JB Bullock 2026.</div></footer></body></html>

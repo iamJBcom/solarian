@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="light" name="color-scheme"/><meta content="Solarian is an operating calendar architecture for every planet." name="description"/><title>Comparative Evaluation — Solarian</title><link href="../assets/figures/image21.webp" rel="icon" type="image/webp"/><link href="../assets/site.css" rel="stylesheet"/><script defer="" src="../assets/search-data.js"></script><script defer="" src="../assets/site.js"></script><link href="../assets/research.css" rel="stylesheet"/><link href="../assets/w5b-notices.css" rel="stylesheet"/><link rel="canonical" href="https://iamjbcom.github.io/solarian/research/03-comparative-evaluation.html"/><meta property="og:url" content="https://iamjbcom.github.io/solarian/research/03-comparative-evaluation.html"/></head><body class="information-page" data-root="../"><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="nav-shell"><a aria-label="Solarian home" class="logo" href="../index.html"><span class="logo-mark">S<span class="mark-dot">.</span></span><span class="logo-word">SOLARIAN<span class="logo-caption">AN OPERATING CALENDAR</span></span></a><nav aria-label="Main navigation" class="primary-nav"><a href="../book/index.html">Read the book</a><a href="../figures/index.html">Figures</a><a href="../protocol/index.html">Protocol</a><a href="../evidence/index.html">Technical record</a><a href="../about/index.html">About</a><a href="../research/index.html">Research &amp; Evaluation</a></nav><div class="nav-actions"><button aria-label="Search the book" class="search-trigger" data-search-open="" type="button">⌕ <span>Search</span><kbd>/</kbd></button><button aria-expanded="false" aria-label="Toggle menu" class="hamburger" id="menu-toggle" type="button">☰</button></div></div><div class="mobile-nav" hidden="" id="mobile-nav"><a href="../book/index.html">Read the book</a><a href="../figures/index.html">Figures</a><a href="../protocol/index.html">Protocol</a><a href="../evidence/index.html">Technical record</a><a href="../about/index.html">About</a><a href="../research/index.html">Research &amp; Evaluation</a></div></header><div aria-labelledby="search-title" aria-modal="true" class="search-modal" hidden="" id="search-modal" role="dialog"><div class="search-panel"><div class="search-heading"><h2 id="search-title">Search Solarian</h2><button aria-label="Close search" data-search-close="" type="button">✕</button></div><input autocomplete="off" id="site-search" placeholder="Search any chapter or appendix…" type="search"/><div aria-live="polite" id="search-results"><p class="search-hint">Enter a word or phrase from the book.</p></div><div class="search-foot">Offline search · Complete manuscript · Press Esc to close</div></div></div><main class="page-light" id="main"><div class="research-reading"><a class="research-return" href="index.html">← Research &amp; Evaluation</a><div class="research-meta">INITIAL PUBLIC ISSUE 1.0 · INFORMATIVE · OCTOBER 2026</div><section aria-label="Publication metadata" class="release-metadata" style="background:#f4f6f8;border-left:3px solid #6b7a86;padding:1rem;margin:1rem 0;font-size:.95rem;line-height:1.5">Author: JB Bullock · Initial Public Issue 1.0 · October 2026 · Informative companion paper · CC BY 4.0. This paper does not constitute a certified standalone normative Solarian Protocol release.</section><article class="research-draft"><h1>Solarian — Comparative Evaluation of Planetary Calendar Architectures</h1>
+<p><em>A requirements-based assessment of shared Earth calendars, independent local calendars and a common multi-world grammar</em></p>
+<p><strong>Initial Public Issue 1.0 · October 2026 · Analytical comparison, not a scored scientific contest</strong></p>
+<h2>1. The comparison must start with the problem</h2>
+<p>Asking which planetary calendar is ‘best’ before specifying what it must do usually guarantees an argument about preferences. A timetable for a short Mars expedition does not need to solve the same problem as a calendar for a self-governing Martian city, and neither faces quite the same requirements as an archive or transport consortium operating simultaneously on Ceres, Mars and the moons of Saturn.</p>
+<p>The purpose of this evaluation is narrower and more useful: <strong>compare different calendar architectures against the ten design requirements explicitly established in Chapter 3 of <em>Solarian</em>.</strong> The requirements are human-scale cadence; local astronomical identity; common chronology; cross-world interoperability; orbital legibility; continuous weekly structure; multi-scale scalability; bounded vocabulary; local cultural autonomy; and graceful failure. [S1]</p>
+<p>No single set of weights is assumed. The same feature can be a strong advantage in one settlement scenario and a disadvantage in another. A local political community is entitled to value cultural continuity and astronomical meaning differently from an interplanetary standards organisation.</p>
+<h2>2. The alternatives being compared</h2>
+<p><strong>Architecture A — An Earth-derived common calendar everywhere.</strong> Every settlement continues to use Gregorian dates, a UTC-derived common timeline and familiar terrestrial week/month/year nomenclature, supplementing it with local sol, phase or mission counters where necessary. This prioritises institutional continuity and interoperability. It need not be technologically primitive; modern precision timescales and location-specific astronomical information can accompany it.</p>
+<p><strong>Architecture B — Fully independent locally designed calendars.</strong> Each destination chooses its own civil year origin, month structure, day, week, intercalation, era and cultural vocabulary. Local communities can optimise their calendars for their own physical and social conditions. Conversion between calendars is an external software or institutional task rather than an inherent common grammar.</p>
+<p><strong>Architecture C — Destination-specific local calendar plus shared chronology.</strong> Each world has a local calendar, but all settlements also retain a precise common historical/event coordinate (for example a UTC-derived instant count). This is a credible hybrid and an important comparator: it delivers unambiguous date conversion without needing Solarian's shared mears or week structure. It is not the same as Architecture B if strong conversion rules are universally deployed.</p>
+<p><strong>Architecture D — Synthetic common human years with local astronomical overlays.</strong> Where a world’s orbit is very long, societies may preserve an Earth-like or otherwise chosen human-scale civil year, while treating the parent planet’s true orbit as a separate scientific or ceremonial cycle. This solves the ‘165-year year’ problem by reserving <em>year</em> for human recurrence. It is especially rational where local heliocentric phase does not govern everyday life.</p>
+<p><strong>Architecture E — Solarian’s two-layer multi-world protocol.</strong> Settlements share the day/week/minth/mear structural grammar, appropriate local orbital calendars, a fixed common astronomical orientation and deterministic conversion conventions. Synchronised worlds use integer R; short-orbit worlds can run the calendars independently; phase-proxy limitations are explicitly identified. This aims to retain the useful features of C and D while giving local dates additional shared structural meaning. [S1]</p>
+<p>These are <strong>architecture families</strong>, not mutually exclusive historical products. In practice, the winning combination may use Earth chronology for records, a locally named civil calendar for residents, Solarian-like operating periods for organisations and an ephemeris for navigation. A fair evaluation must not treat hybrids as an illicit escape from a supposed competition.</p>
+<h2>3. Qualitative requirements matrix</h2>
+<p>In this matrix, <strong>strong</strong> means the architecture naturally addresses the requirement by design; <strong>conditional</strong> means it can with additional decisions, translation or overlays; <strong>weak</strong> means it has no intrinsic solution to that requirement. These are judgments under the multi-world design brief, <strong>not empirical numerical scores</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>A. Earth everywhere</th>
+<th>B. Independent local</th>
+<th>C. Local + chronology</th>
+<th>D. Synthetic year</th>
+<th>E. Solarian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human-scale cadence</td>
+<td>Strong on Earth scale</td>
+<td>Conditional</td>
+<td>Conditional</td>
+<td>Strong</td>
+<td>Strong by design</td>
+</tr>
+<tr>
+<td>Local astronomical identity</td>
+<td>Weak without overlays</td>
+<td>Strong if chosen</td>
+<td>Strong if chosen</td>
+<td>Secondary overlay</td>
+<td>Strong where applicable</td>
+</tr>
+<tr>
+<td>Common chronology</td>
+<td>Strong</td>
+<td>Conditional</td>
+<td>Strong</td>
+<td>Conditional</td>
+<td>Strong with external chronology</td>
+</tr>
+<tr>
+<td>Cross-world structural interoperability</td>
+<td>Strong only because dates are the same</td>
+<td>Weak without convention</td>
+<td>Partial via conversion</td>
+<td>Conditional</td>
+<td>Strong by common grammar</td>
+</tr>
+<tr>
+<td>Orbital legibility</td>
+<td>Weak outside Earth</td>
+<td>Conditional</td>
+<td>Conditional</td>
+<td>Weak unless overlaid</td>
+<td>Tested; specialised limits</td>
+</tr>
+<tr>
+<td>Unbroken local seven-position week</td>
+<td>Strong if inherited</td>
+<td>Conditional</td>
+<td>Conditional</td>
+<td>Conditional</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multi-scale scalability</td>
+<td>Stable but not local</td>
+<td>One-off design burden</td>
+<td>Scales via translation</td>
+<td>Strong human-scale</td>
+<td>Shared architecture scales with R</td>
+</tr>
+<tr>
+<td>Bounded recurring vocabulary</td>
+<td>Strong</td>
+<td>Conditional</td>
+<td>Conditional</td>
+<td>Strong</td>
+<td>Explicitly bounded</td>
+</tr>
+<tr>
+<td>Local cultural autonomy</td>
+<td>Limited in civil-date system</td>
+<td>Strong</td>
+<td>Strong</td>
+<td>Conditional</td>
+<td>Strong over structural identifiers</td>
+</tr>
+<tr>
+<td>Graceful failure</td>
+<td>Overlay-dependent</td>
+<td>Case by case</td>
+<td>Converter-dependent</td>
+<td>Overlay-dependent</td>
+<td>Explicit phase-applicability route</td>
+</tr>
+</tbody>
+</table>
+<p>The matrix illustrates trade-offs, not dominance. Architecture A’s uniformity gives a real advantage for existing Earth institutions. Architecture B has unbeatable latitude for local identity. Architecture C may be <em>quite sufficient</em> for a small network of worlds whose inhabitants rarely need to interpret each other’s operational periods. Architecture D solves recurring human-year needs elegantly, but may forfeit a locally astronomical meaning for the civil year. Architecture E attempts more simultaneous objectives and correspondingly imposes more shared definitions and implementation duties.</p>
+<h2>4. Comparing the architectures against practical scenarios</h2>
+<h3>Scenario 1 — A temporary scientific outpost</h3>
+<p>An expedition on Mars or an icy moon is controlled largely by an Earth-based agency, mission chronology dominates, and staff rotate through assignments. <strong>Using Earth dates with local sol/shift counters (Architecture A) is often the sensible answer.</strong> The overhead of adopting a novel local civil-year system may produce little benefit. Solarian has no automatic claim to be preferable merely because it is more systematic.</p>
+<h3>Scenario 2 — A permanent, culturally distinctive Mars city</h3>
+<p>A self-governing Martian settlement may legitimately prefer a calendar whose years and seasonal divisions refer directly to Mars, while supporting familiar human operating periods. Architecture B or C can do this, including via a Mars-specific design such as Marian. Solarian also supplies Martian astronomical identity and portable minths, but it makes a specific trade: <strong>665/672-sol whole-week civil years</strong> in its idealised R2 structure rather than Marian's <strong>668/669-sol years</strong> with shortened terminal weekday-position sequences. A planet-specific choice is required; the comparison cannot be settled solely by calling one 'more accurate' or 'more regular'. [S1][M1]</p>
+<h3>Scenario 3 — A network across Jupiter’s moons</h3>
+<p>Settlements on Europa, Ganymede, Callisto and artificial habitats need not share natural day lengths, daylight cycles or practical surface environments, yet share the same heliocentric orbital system. A Solarian Jovian <strong>R13</strong> calendar offers a common astronomical year and standard-day cadence without deriving civil days from any moon’s local orbital period. Architecture C can achieve unambiguous conversion but does not automatically supply a common Jovian operating language. The marginal benefit of E grows with the volume of intersettlement work and travel. [S1]</p>
+<h3>Scenario 4 — Saturn or Neptune over generations</h3>
+<p>A Saturnian astronomical year lasts nearly thirty Earth years; a Neptunian one nearly 165. Architecture D can preserve a short synthetic <em>civil year</em> and keep the physical orbit outside everyday life. Solarian instead preserves the physical orbital year and lets an approximately 48-week <em>mear</em> carry human recurrence. Both approaches separate functions. The decision turns on whether local astronomical year identity and consistent terminology across other worlds are valued more than retaining the familiar social use of the word 'year'. [S1]</p>
+<h3>Scenario 5 — A multi-world records and software ecosystem</h3>
+<p>A records service needs unequivocal timestamps, qualified calendar identities, conversion rules and version control. Architecture C may already provide all necessary machine interoperability. Solarian adds a shared weekly index, a finite structural A–L minth vocabulary and reusable world-profile semantics. The extra grammar may reduce ambiguity in collaborative planning, but it also requires implementers to adopt correct ephemeris versions, precise crossing rules and immutable year-form registries. A machine-only system should not be given credit for social advantages that have not been tested with users. [T1]</p>
+<h3>Scenario 6 — A highly eccentric small body</h3>
+<p>A local calendar with equal elapsed-time months may give a misleading angular-phase impression near perihelion. This problem affects many calendar designs; it is not solved by choosing Solarian or independent local calendars as a label. Architecture B could deliberately use equal-angle months. Solarian explicitly identifies numerical phase failure and calls for specialised astronomical representation while retaining its human cadence and chronology. That is a defined route, <strong>not yet a certified solved display for Juno, Bamberga or all trans-Neptunian objects</strong>. [T2][T4]</p>
+<h2>5. Distinct trade-offs worth treating honestly</h2>
+<p><strong>Astronomical fidelity versus civil regularity.</strong> A calendar built from whole uninterrupted weeks must quantise physical year boundaries. The difference between the physical crossing and the chosen week boundary can approach half a local week at an individual endpoint. Solarian manages this transparently, but another Mars-specific calendar can track the sol count more finely. Long-run fidelity and close <em>per-year</em> agreement are different attributes.</p>
+<p><strong>Shared semantics versus local discretion.</strong> A common A–L minth grammar, 100° origin and SWI coordinate help interoperability only if communities adopt them. They are deliberately small constraints compared with a uniform calendar, but they are real constraints. A future polity might reject a universal 100° direction on cultural or scientific grounds.</p>
+<p><strong>Readable dates versus scientific precision.</strong> Neither Solarian nor a customised planetary calendar replaces accurate ephemerides, location-sensitive solar times, mission times or a continuous precision timescale. Good civil representation is a different engineering objective from spacecraft navigation.</p>
+<p><strong>Software ease versus specification scope.</strong> Gregorian date libraries and UTC handling have enormous real installed bases. Solarian requires new libraries, reference fixtures, governance and migration interfaces. A beautifully regular local calendar that lacks dependable conversion and upgrade rules is not ready for commercial or legal use.</p>
+<p><strong>Design coverage versus empirical confirmation.</strong> Solarian’s bounded DE440 planet profiles and historical asteroid candidate classifications are encouraging; their scientific evidence is not equivalent to certified contemporary support for every possible world and year. Every rival proposal should be asked for equivalent evidence rather than judged by different standards. [T1][T4]</p>
+<h2>6. Findings by question, not an arbitrary winner</h2>
+<p>If the question is <strong>'what should the next small Mars outpost use?'</strong>, Earth dates plus sol counters may be the pragmatic answer. If it is <strong>'which calendar best supports a particular Mars civilisation’s chosen notion of fidelity and recurring dates?'</strong>, a specialised calendar such as Marian deserves serious consideration. If it is <strong>'how can a civilisation across many astronomical homes share a calendar grammar while maintaining local orbital identity?'</strong>, Solarian is a coherent and promising architectural candidate.</p>
+<p>The distinction between the third and first two cases is the essence of the proposal. Solarian does not need to beat Gregorian at Gregorian’s existing job, or defeat Marian within every exclusively Martian design requirement, in order to contribute a useful multi-world standard.</p>
+<h2>7. Evaluation questions for independent adopters</h2>
+<p>A serious adopter should ask: Does the settlement actually need locally meaningful orbital months? Is a continuous weekday sequence a hard requirement? Are the public astronomical conventions and versioned year forms fully specified? Is the receiving organisation able to round-trip every civil date against a common timestamp? Are unknown year forms handled by a fail-closed update procedure? Do the proposed cultural names and operating cycles pass user testing? Is the standard phase proxy demonstrably adequate for that world, or is specialised phase information more honest? Can the institution migrate without destroying the historical meaning of existing records?</p>
+<p>A final adoption decision must weigh costs, governance and local legitimacy, not merely the attractiveness of the Repeat Factor arithmetic. That is a strength of an open protocol approach: the claims and tests can be debated separately from the preference to adopt.</p>
+<h2>Conclusion</h2>
+<p><strong>Solarian's primary comparative advantage is not that it makes every local calendar better. It is that it offers one recognisable structure for many different local calendars while retaining a useful distinction between human cadence and the orbit.</strong> That advantage becomes more compelling as settlements and institutions span several astronomical homes. The same comparison reveals reasons to use other calendars in other circumstances. A credible evaluation should retain both findings.</p>
+<h2>Evidence and method note</h2>
+<p>Requirements and systems architecture derive from the approved <em>Solarian</em> Chapters 3–9, 15–25 and Appendix E [S1]. The exact planetary year-form and phase limits derive from frozen technical records [T1]–[T4]. Marian descriptions reflect its current separately defined 12-month, 24-minth, 668/669-sol architecture [M1]; its comparative merits are analytic judgments, not externally tested human preferences. This evaluation used a qualitative requirements matrix; <strong>no scientific ranking scores or adoption surveys were created</strong>.</p>
+</article><div class="research-licence-notice" role="note"><strong>Rights for this standalone paper: Creative Commons Attribution 4.0 International (CC BY 4.0).</strong><p>© 2026 JB Bullock. The book and original illustrations remain separately copyrighted. The exact companion text is unchanged.</p><a href="licensing/03-comparative-evaluation.LICENSE.txt">Read the paper-specific licence and attribution notice</a></div><nav aria-label="Document actions" class="research-foot-links"><a href="pdf/03-comparative-evaluation.pdf">Printable PDF</a><a href="source/03-comparative-evaluation.md">Download source Markdown</a><a href="evidence/W3-EVIDENCE-REGISTER.csv">Evidence register (CSV)</a><a href="index.html">All four companion papers</a></nav></div></main><footer class="site-footer"><div class="footer-inner"><div><div class="footer-logo">SOLARIAN<span class="gold">.</span></div><p>One grammar. Many calendars.</p><small>Book text and artwork © JB Bullock 2026. All rights reserved.</small></div><div class="footer-links"><a href="../book/index.html">Book</a><a href="../figures/index.html">Figures</a><a href="../protocol/index.html">Protocol</a><a href="../rights/index.html">Rights &amp; licensing</a></div></div><div class="footer-base">First Public Web Edition 1.0 · October 2026 · Book and original illustrations © JB Bullock 2026.</div></footer></body></html>

@@ -1,0 +1,21 @@
+claim_id,claim,classification,sources,qualifier
+CL-01,Two-layer calendar architecture and three regimes,DEFINED,S1,Author proposal; not empirical
+CL-02,Repeat Factor identity R=minths/month=mears/year,MATHEMATICALLY_DERIVED,S1,Conditional on synced model and two twelve-positions
+CL-03,Unbroken seven-position local week; adjustments in weeks,DEFINED_AND_DERIVED,"S1,T1",Sol-based Mars does not share standard physical phase
+CL-04,"Mear always 12 minths, not fixed 48 weeks",DEFINED,S1,Minths may contain 3/4/5 weeks
+CL-05,"Six evaluated planet profiles, 28 distinct forms",NUMERICALLY_TESTED_BOUNDED,T1,Not all epoch; not public normative release
+CL-06,Six supplemental Jupiter/Saturn/Uranus/Neptune forms,NUMERICALLY_TESTED_BOUNDED,T1,Exact week-length lookup; parity not unique
+CL-07,Saturn 1535..1539 week forms across 33 returns,NUMERICALLY_TESTED_BOUNDED,"T1,S1",DE440 evaluated bounded window
+CL-08,Phase thresholds ≤30 marginal 30–45 specialised >45,AUTHOR_RATIFIED_POLICY,T2,Numeric score not full conformance
+CL-09,Mercury phase deviation ~59.26° tested window,NUMERICALLY_TESTED_BOUNDED,T2,Keep chronology; specialised phase display pending
+CL-10,Asteroid 11 standard-potential /6 marginal/2 specialised,HISTORICAL_DIAGNOSTIC,T4,Mixed-model archival CODES+DE440
+CL-11,61 generated supplemental asteroid vectors,CANDIDATE_ONLY,"T3,T4",Not individually ratified
+CL-12,No contemporary Horizons 19-body execution,NOT_DONE,"T3,T4",Do not assert modern certification
+CL-13,All-epoch profile certainty,NOT_ESTABLISHED,"T1,T2",Future forms require versioned update
+CL-14,Šurán whole-week correction precedent,HISTORICALLY_DOCUMENTED,"R1,S1",Solarian must not claim invention
+CL-15,Darian shortened weekday-position precedent,HISTORICALLY_DOCUMENTED,"R2,R3,S1",No omitted physical sols
+CL-16,Marian distinct Mars-specific 668/669-sol calendar,SOURCE_QUALIFIED_AUTHOR_PROJECT,M1,Not a Solarian implementation
+CL-17,Solarian best for all worlds including Mars,VALUE_JUDGMENT_NOT_PROVEN,"S1,M1",Recommendation context-specific
+CL-18,Universal novelty or exclusive priority,NOT_ESTABLISHED,"R1,R2,R3,R6,S1",Systematic prior art review absent
+CL-19,Human preference for mear/minth proved,NOT_TESTED,S1,No field human-factors trials
+CL-20,Already publicly released Protocol v1.0/DOI,NOT_VERIFIED_HOLD,"S1,T5",Publication-channel gates pending

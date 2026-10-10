@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="light" name="color-scheme"/><meta content="Read Appendix C - Intercalation &amp; Expansion-Joint Tables, from the complete Solarian manuscript." name="description"/><title>Appendix C - Intercalation &amp; Expansion-Joint Tables — Solarian</title><link href="../../assets/figures/image21.webp" rel="icon" type="image/webp"/><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/search-data.js"></script><script defer="" src="../../assets/site.js"></script><link rel="canonical" href="https://iamjbcom.github.io/solarian/book/read/41-appendix-c-intercalation-expansion-joint-tables.html"/><meta property="og:url" content="https://iamjbcom.github.io/solarian/book/read/41-appendix-c-intercalation-expansion-joint-tables.html"/></head><body class="reader-page" data-root="../../"><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="nav-shell"><a aria-label="Solarian home" class="logo" href="../../index.html"><span class="logo-mark">S<span class="mark-dot">.</span></span><span class="logo-word">SOLARIAN<span class="logo-caption">AN OPERATING CALENDAR</span></span></a><nav aria-label="Main navigation" class="primary-nav"><a href="../../book/index.html">Read the book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../evidence/index.html">Technical record</a><a href="../../research/index.html">Research &amp; Evaluation</a><a href="../../about/index.html">About</a></nav><div class="nav-actions"><button aria-label="Search the book" class="search-trigger" data-search-open="" type="button">⌕ <span>Search</span><kbd>/</kbd></button><button aria-expanded="false" aria-label="Toggle menu" class="hamburger" id="menu-toggle" type="button">☰</button></div></div><div class="mobile-nav" hidden="" id="mobile-nav"><a href="../../book/index.html">Read the book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../evidence/index.html">Technical record</a><a href="../../research/index.html">Research &amp; Evaluation</a><a href="../../about/index.html">About</a></div></header><div aria-labelledby="search-title" aria-modal="true" class="search-modal" hidden="" id="search-modal" role="dialog"><div class="search-panel"><div class="search-heading"><h2 id="search-title">Search Solarian</h2><button aria-label="Close search" data-search-close="" type="button">✕</button></div><input autocomplete="off" id="site-search" placeholder="Search any chapter or appendix…" type="search"/><div aria-live="polite" id="search-results"><p class="search-hint">Enter a word or phrase from the book.</p></div><div class="search-foot">Offline search · Complete manuscript · Press Esc to close</div></div></div><main class="reading-layout" id="main"><aside class="reading-rail"><div class="rail-header"><span class="rail-kicker">BOOK NAVIGATION</span><a href="../index.html">← All chapters</a></div><div class="rail-list"><a class="rail-item" href="39-appendix-a-solarian-protocol-v1-0.html"><span>Appendix A</span><span>Appendix A - Solarian Protocol v1.0</span></a><a class="rail-item" href="40-appendix-b-mathematical-basis-calendar-selection.html"><span>Appendix B</span><span>Appendix B - Mathematical Basis &amp; Calendar Selection</span></a><a class="rail-item is-active" href="41-appendix-c-intercalation-expansion-joint-tables.html"><span>Appendix C</span><span>Appendix C - Intercalation &amp; Expansion-Joint Tables</span></a><a class="rail-item" href="42-appendix-d-interplanetary-geometry-the-month-gap-heuristic.html"><span>Appendix D</span><span>Appendix D - Interplanetary Geometry &amp; The Month-Gap Heuristic</span></a><a class="rail-item" href="43-appendix-e-comparative-calendars-design-context.html"><span>Appendix E</span><span>Appendix E - Comparative Calendars &amp; Design Context</span></a><a class="rail-item" href="44-appendix-f-sources-notes-bibliography.html"><span>Appendix F</span><span>Appendix F - Sources, Notes &amp; Bibliography</span></a><a class="rail-item" href="45a-appendix-g-outer-planets-astronomical-reality.html"><span>Appendix G</span><span>Outer Planets: From Idealised Orbits to Astronomical Reality</span></a></div><div class="rail-bottom"></div></aside><div class="reading-main"><div class="reader-top"><a href="../index.html">← BOOK CONTENTS</a><span>APPENDIX C / G</span></div><div class="reader-article"><article><div class="eyebrow">Solarian · Appendices</div><h1 id="c---intercalation-expansion-joint-tables">C - Intercalation &amp; Expansion-Joint Tables</h1><h2 id="how-solarian-keeps-civil-calendars-aligned-to-real-orbits">How Solarian Keeps Civil Calendars Aligned to Real Orbits</h2><h2 id="c.1-purpose">C.1 Purpose</h2><p>Appendix C defines the canonical Solarian calendar profiles. This appendix explains how those calendars remain aligned to their physical orbits.</p><p>There are two separate questions:</p><ol type="1">
+<li><p><strong>Which civil year form applies — Common or Leap?</strong></p></li>
+<li><p><strong>Where does the corresponding week difference go inside that year?</strong></p></li>
+</ol><p>Solarian treats them separately.</p><p>The first is determined from the underlying astronomy. The second is fixed by the implementation profile.</p><p>In short:</p><blockquote>
+<p><strong>Astronomy selects the year form.<br/>
+The profile selects the internal structure.</strong></p>
+</blockquote><p>That distinction makes the calendars astronomically anchored without requiring users to think about astronomy every time a year changes.</p><h2 id="c.2-common-and-leap-forms">C.2 Common and Leap forms</h2><p>Every standard Solarian astronomical profile uses two adjacent whole-week year lengths.</p><p>One contains an even number of weeks and is called the: <strong>Common Year</strong></p><p>The other contains an odd number and is called the: <strong>Leap Year</strong></p><p>Leap therefore describes <strong>parity</strong>, not greater length.</p><p>Mars, for example, uses: <strong>96-week Common Years</strong></p><p>And: <strong>95-week Leap Years</strong></p><p>Uranus similarly has a Leap form that is one week shorter than its Common form.</p><p>The two forms are sufficient because a physical orbital year that falls between two whole-week lengths can be represented over time by an appropriate mixture of those adjacent values.</p><p>No third civil year form is required.</p><h2 id="c.3-the-deterministic-year-selection-rule">C.3 The deterministic year-selection rule</h2><p>Solarian does not define arbitrary rules such as: every tenth Venusian year is Leap.</p><p>Those ratios are useful summaries, but they are not the underlying rule.</p><p>The physical Solarian New Year occurs when the world crosses the common heliocentric reference direction: <strong>λ₀ = 100°</strong></p><p>That crossing will almost never occur exactly on a permitted civil week boundary.</p><p>For each physical crossing, the implementation therefore selects: <strong>the nearest permitted local week boundary</strong></p><p>For a standard-day world, these are the Monday boundaries of the Solarian Week Index.</p><p>For Mars, they are boundaries of its continuous seven-sol local week.</p><p>If a crossing were exactly halfway between two permitted boundaries, the later boundary would be selected.</p><p>The interval between two consecutive selected boundaries determines the civil year length.</p><p>That length will be one of the profile's two approved forms and therefore identifies the year as Common or Leap.</p><p>For example:</p><blockquote>
+<p>Earth → 52 or 53 weeks<br/>
+Mars → 95 or 96 Martian weeks<br/>
+Jupiter → 618 or 619 weeks<br/>
+Saturn → 1,536 or 1,537 weeks</p>
+</blockquote><p>The exact future sequence is therefore generated from the orbit rather than imposed by a separate mnemonic cycle.</p><h2 id="c.4-bounded-quantisation">C.4 Bounded quantisation</h2><p>Rounding an astronomical crossing to its nearest week boundary introduces deliberate civil approximation.</p><p>The maximum New Year displacement is: <strong>half one local week</strong></p><p>For standard-day calendars, that is approximately: <strong>3.5 days</strong></p><p>For Mars: <strong>3.5 sols</strong></p><p>This is the price of preserving complete weeks. The alternative would be to break the week in order to follow the astronomical event more precisely.</p><p>Solarian deliberately chooses not to do that.</p><h2 id="c.5-expansion-joints">C.5 Expansion joints</h2><p>Once the year form is known, its internal structure is predetermined.</p><p>In a synchronized calendar, the normal minth contains four weeks.</p><p>A designated expansion-joint minth may instead contain: <strong>3 weeks</strong></p><p>Or: <strong>5 weeks</strong></p><p>The primary expansion joint is: <strong>Minth L — the final minth of a mear</strong></p><p>A contraction is written: <strong>L−</strong> and changes L from four weeks to three.</p><p>An expansion is written: <strong>L+</strong> and changes L from four weeks to five.</p><p>Where the correction exceeds the available Minth-L capacity, secondary joints may be used according to the distribution rules in the Solarian Protocol.</p><p>Earth is the principal canonical example.</p><h2 id="c.6-canonical-synchronized-patterns">C.6 Canonical synchronized patterns</h2><p>The following table contains the fixed Common and Leap structures for the canonical synchronized profiles.</p><p>M3 L+, for example, means that Minth L of Mear 3 expands from four weeks to five.</p><table>
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 19%"/>
+<col style="width: 24%"/>
+<col style="width: 19%"/>
+<col style="width: 20%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Profile</strong></th>
+<th><strong>Common Year</strong></th>
+<th><strong>Common adjustments</strong></th>
+<th><strong>Leap Year</strong></th>
+<th><strong>Leap adjustments</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Earth R1</strong></th>
+<th>52 weeks</th>
+<th>C+, F+, I+, L+</th>
+<th>53 weeks</th>
+<th>C+, F+, I+, K+, L+</th>
+</tr>
+<tr class="header">
+<th><strong>Mars R2</strong></th>
+<th>96 Martian weeks</th>
+<th>None</th>
+<th>95 Martian weeks</th>
+<th>M2 L−</th>
+</tr>
+<tr class="odd">
+<th><strong>R3 habitat</strong></th>
+<th>144 weeks</th>
+<th>None</th>
+<th>145 weeks</th>
+<th>M3 L+</th>
+</tr>
+<tr class="header">
+<th><strong>Vesta R4</strong></th>
+<th>190 weeks</th>
+<th>M1, M3 L−</th>
+<th>189 weeks</th>
+<th>M1, M3, M4 L−</th>
+</tr>
+<tr class="odd">
+<th><strong>Ceres R5</strong></th>
+<th>240 weeks</th>
+<th>None</th>
+<th>241 weeks</th>
+<th>M5 L+</th>
+</tr>
+<tr class="header">
+<th><strong>Hygiea R6</strong></th>
+<th>290 weeks</th>
+<th>M2, M4 L+</th>
+<th>291 weeks</th>
+<th>M2, M4, M6 L+</th>
+</tr>
+<tr class="odd">
+<th><strong>Sylvia R7</strong></th>
+<th>338 weeks</th>
+<th>M3, M6 L+</th>
+<th>339 weeks</th>
+<th>M3, M6, M7 L+</th>
+</tr>
+<tr class="header">
+<th><strong>Jupiter R13</strong></th>
+<th>618 weeks</th>
+<th>M2, 4, 6, 8, 10, 12 L−</th>
+<th>619 weeks</th>
+<th>M2, 4, 6, 8, 10 L−</th>
+</tr>
+<tr class="odd">
+<th><strong>Saturn R32</strong></th>
+<th>1,536 weeks</th>
+<th>None</th>
+<th>1,537 weeks</th>
+<th>M32 L+</th>
+</tr>
+<tr class="header">
+<th><strong>Uranus R91</strong></th>
+<th>4,384 weeks</th>
+<th>16 L+ positions</th>
+<th>4,383 weeks</th>
+<th>15 L+ positions</th>
+</tr>
+<tr class="odd">
+<th><strong>Neptune R179</strong></th>
+<th>8,598 weeks</th>
+<th>6 L+ positions</th>
+<th>8,599 weeks</th>
+<th>7 L+ positions</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table><p>The general pattern is worth noticing. Common and Leap forms are normally almost identical. The difference between them is one week and therefore usually one adjusted minth.</p><h2 id="c.7-the-simple-profiles">C.7 The simple profiles</h2><p>Several canonical calendars need almost no machinery at all.</p><h3 id="mars-1">Mars</h3><p>The R2 nominal structure is exactly: <strong>96 weeks</strong> So a Common Year contains: <strong>48 + 48</strong> weeks across its two mears. A Leap Year contracts only the final Minth L: <strong>48 + 47</strong> The final Martian orbital month therefore contains seven weeks rather than eight.</p><h3 id="ceres">Ceres</h3><p>The nominal R5 structure is: <strong>240 weeks</strong> So the Common Year requires no adjustment. The Leap Year expands only the final Minth L of Mear 5, producing: <strong>241 weeks</strong></p><h3 id="saturn-1">Saturn</h3><p>The R32 nominal structure is: <strong>1,536 weeks</strong> Again, the Common Year needs no correction. The Leap Year simply expands the final Minth L of Mear 32.</p><p>These profiles illustrate the mechanism in its cleanest form: <strong>normal structure most of the time; one controlled week where needed.</strong></p><h2 id="c.8-earth-and-secondary-joints">C.8 Earth and secondary joints</h2><p>Earth is structurally R1, but its approximately 52-week year sits several weeks above the nominal 48-week mear.</p><p>A Common Year therefore uses: <strong>C+ · F+ · I+ · L+</strong></p><p>Giving:<br/>
+<strong>4 · 4 · 5 | 4 · 4 · 5 | 4 · 4 · 5 | 4 · 4 · 5</strong></p><p>This produces four thirteen-week quarters.</p><p>The Leap Year adds one further expansion at Minth K:<br/>
+<strong>4 · 4 · 5 | 4 · 4 · 5 | 4 · 4 · 5 | 4 · 5 · 5</strong></p><p>Earth therefore demonstrates why secondary expansion joints exist.</p><p>The underlying R1 structure survives even though Minth L alone cannot absorb the full difference.</p><h2 id="c.9-distributed-outer-world-corrections">C.9 Distributed outer-world corrections</h2><p>Larger Repeat Factors provide many possible Minth-L joints through which small corrections can be distributed.</p><h3 id="jupiter">Jupiter</h3><p>R13 has a nominal length of: <strong>624 weeks</strong></p><p>The actual year requires contraction.</p><p>The Common form contracts Minth L in Mears: <strong>2, 4, 6, 8, 10 and 12</strong> producing 618 weeks.</p><p>The Leap form omits the final contraction and therefore contains: <strong>619 weeks</strong></p><h3 id="uranus">Uranus</h3><p>The R91 nominal structure is: <strong>4,368 weeks</strong></p><p>The 4,384-week Common form requires sixteen expansions, distributed through the year.</p><p>The 4,383-week Leap form uses fifteen.</p><p>The Common form's expanded mears are:</p><blockquote>
+<p><strong>5, 10, 16, 21, 26, 32, 38, 43, 49, 55, 61, 67, 73, 79, 85, 91</strong></p>
+</blockquote><p>The Leap form uses the same sequence except for Mear 91.</p><h3 id="neptune">Neptune</h3><p>R179 begins from: <strong>8,592 weeks</strong></p><p>The 8,598-week Common Year expands Minth L in Mears:</p><blockquote>
+<p><strong>14, 44, 74, 104, 134 and 164</strong></p>
+</blockquote><p>The 8,599-week Leap Year adds: <strong>Mear 179</strong></p><p>Only six or seven minths out of 2,148 are therefore different from their normal four-week length.</p><p>Large orbital years do not require more kinds of calendar machinery.</p><p>They simply give the same machinery more places to operate.</p><h2 id="c.10-independent-calendars">C.10 Independent calendars</h2><p>Venus and Mercury do not use Repeat Factors.</p><p>Their human operating calendar remains: <strong>12 four-week minths = 48-week mear</strong> without astronomical adjustment.</p><p>Only the separate orbital calendar intercalates.</p><h3 id="venus">Venus</h3><p>Common astronomical year: <strong>32 weeks</strong></p><p>Month pattern:</p><blockquote>
+<p><strong>3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 2</strong></p>
+</blockquote><p>Leap astronomical year: <strong>33 weeks</strong> with the distinguishing week placed in Month 12:</p><blockquote>
+<p><strong>3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 3</strong></p>
+</blockquote><h3 id="mercury">Mercury</h3><p>Common astronomical year: <strong>12 weeks</strong> with twelve one-week orbital months.</p><p>Leap astronomical year: <strong>13 weeks</strong> with Month 12 expanded to two weeks.</p><p>In both cases, the human mear continues unaffected across astronomical New Year.</p><p>That is the defining feature of the independent regime.</p><h2 id="c.11-pluto-receives-no-standard-intercalation-profile">C.11 Pluto receives no standard intercalation profile</h2><p>Pluto's candidate R270 arithmetic could support: <strong>12,938-week Common Years</strong></p><p>And: <strong>12,937-week Leap Years</strong> through twenty-two or twenty-three Minth-L contractions.</p><p>But the arithmetic is not the problem. The standard twelve-month astronomical layer fails the required orbital-phase test.</p><p>Solarian Protocol v1.0 therefore does <strong>not</strong> issue Pluto with a standard intercalation profile.</p><p>Its human operating calendar remains available. Its astronomical representation requires specialised treatment.</p><h2 id="c.12-long-run-ratios-are-descriptions-not-rules">C.12 Long-run ratios are descriptions, not rules</h2><p>The mean orbital periods produce useful approximations such as:</p><blockquote>
+<p>Earth — roughly one 53-week year every 5–6 years<br/>
+Mars — roughly 18 Common : 17 Leap<br/>
+Ceres — roughly 4 Common : 1 Leap<br/>
+Jupiter — roughly 1 Common : 16 Leap<br/>
+Saturn — approximately 47% Common : 53% Leap<br/>
+Venus — roughly 9 Common : 1 Leap<br/>
+Mercury — roughly 3 Common : 4 Leap</p>
+</blockquote><p>These are helpful for understanding the calendars. They are <strong>not</strong> the authoritative leap algorithms.</p><p>The actual sequence follows the physical λ₀ crossings and permitted whole-week boundaries.</p><p>That avoids inventing a different arbitrary arithmetic leap cycle for every world.</p><h2 id="c.13-published-schedules">C.13 Published schedules</h2><p>Ordinary software should not need to calculate planetary ephemerides in order to display next year's calendar.</p><p>Canonical implementation profiles should therefore publish precomputed Common/Leap schedules for practical use.</p><p>Those schedules are generated data.</p><p>They are not the defining rule.</p><p>The full reference data, machine-readable profiles, generated schedules and implementation test vectors belong in the accompanying <strong>Solarian Technical Record</strong>.</p><p>That material can be updated and versioned independently of this book while preserving the normative protocol and historical calendar records.</p><h2 id="c.14-the-mechanism-in-four-steps">C.14 The mechanism in four steps</h2><p>A Solarian astronomical calendar therefore runs as follows.</p><p><strong>1. Measure the orbit.</strong> Identify the physical λ₀ crossing.</p><p><strong>2. Round at the week.</strong> Assign the crossing to the nearest permitted civil week boundary.</p><p><strong>3. Select the year form.</strong> The interval between successive civil New Years determines whether the year is Common or Leap.</p><p><strong>4. Apply the fixed profile.</strong> Use the published expansion-joint or orbital-month pattern for that year form.</p><p>There is no stray day. There is no weekday reset. There is no universal planetary leap formula pretending all orbits are the same.</p><p>The astronomy chooses between two permitted whole-week forms. The profile decides where the one-week difference goes.</p><blockquote>
+<p><strong>Measure the orbit.<br/>
+Round at the week.<br/>
+Distribute the difference.<br/>
+Preserve the structure.</strong></p>
+</blockquote><span aria-hidden="true" class="anchor-target" id="section-44"></span></article></div><div class="reader-actions"><button class="bookmark" data-bookmark="book/read/41-appendix-c-intercalation-expansion-joint-tables.html" type="button">☆ Save reading position</button><button aria-label="Increase text size" class="reading-size" data-font-up="" type="button">Aa +</button><button aria-label="Decrease text size" class="reading-size" data-font-down="" type="button">Aa −</button></div><nav aria-label="Adjacent sections" class="reader-pager"><a class="pager-link prev" href="40-appendix-b-mathematical-basis-calendar-selection.html"><span class="pager-label">← PREVIOUS</span><strong>Appendix B - Mathematical Basis &amp; Calendar Selection</strong></a><a class="pager-link next" href="42-appendix-d-interplanetary-geometry-the-month-gap-heuristic.html"><span class="pager-label">NEXT →</span><strong>Appendix D - Interplanetary Geometry &amp; The Month-Gap Heuristic</strong></a></nav></div></main><footer class="site-footer"><div class="footer-inner"><div><div class="footer-logo">SOLARIAN<span class="gold">.</span></div><p>One grammar. Many calendars.</p><small>Book text and artwork © JB Bullock 2026. All rights reserved.</small></div><div class="footer-links"><a href="../../book/index.html">Book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../rights/index.html">Rights &amp; licensing</a></div></div><div class="footer-base">First Public Web Edition 1.0 · October 2026 · Book and original illustrations © JB Bullock 2026.</div></footer></body></html>

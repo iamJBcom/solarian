@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="light" name="color-scheme"/><meta content="Read Appendix A - Solarian Protocol v1.0, from the complete Solarian manuscript." name="description"/><title>Appendix A - Solarian Protocol v1.0 — Solarian</title><link href="../../assets/figures/image21.webp" rel="icon" type="image/webp"/><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/search-data.js"></script><script defer="" src="../../assets/site.js"></script><link rel="canonical" href="https://iamjbcom.github.io/solarian/book/read/39-appendix-a-solarian-protocol-v1-0.html"/><meta property="og:url" content="https://iamjbcom.github.io/solarian/book/read/39-appendix-a-solarian-protocol-v1-0.html"/></head><body class="reader-page" data-root="../../"><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="nav-shell"><a aria-label="Solarian home" class="logo" href="../../index.html"><span class="logo-mark">S<span class="mark-dot">.</span></span><span class="logo-word">SOLARIAN<span class="logo-caption">AN OPERATING CALENDAR</span></span></a><nav aria-label="Main navigation" class="primary-nav"><a href="../../book/index.html">Read the book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../evidence/index.html">Technical record</a><a href="../../research/index.html">Research &amp; Evaluation</a><a href="../../about/index.html">About</a></nav><div class="nav-actions"><button aria-label="Search the book" class="search-trigger" data-search-open="" type="button">⌕ <span>Search</span><kbd>/</kbd></button><button aria-expanded="false" aria-label="Toggle menu" class="hamburger" id="menu-toggle" type="button">☰</button></div></div><div class="mobile-nav" hidden="" id="mobile-nav"><a href="../../book/index.html">Read the book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../evidence/index.html">Technical record</a><a href="../../research/index.html">Research &amp; Evaluation</a><a href="../../about/index.html">About</a></div></header><div aria-labelledby="search-title" aria-modal="true" class="search-modal" hidden="" id="search-modal" role="dialog"><div class="search-panel"><div class="search-heading"><h2 id="search-title">Search Solarian</h2><button aria-label="Close search" data-search-close="" type="button">✕</button></div><input autocomplete="off" id="site-search" placeholder="Search any chapter or appendix…" type="search"/><div aria-live="polite" id="search-results"><p class="search-hint">Enter a word or phrase from the book.</p></div><div class="search-foot">Offline search · Complete manuscript · Press Esc to close</div></div></div><main class="reading-layout" id="main"><aside class="reading-rail"><div class="rail-header"><span class="rail-kicker">BOOK NAVIGATION</span><a href="../index.html">← All chapters</a></div><div class="rail-list"><a class="rail-item is-active" href="39-appendix-a-solarian-protocol-v1-0.html"><span>Appendix A</span><span>Appendix A - Solarian Protocol v1.0</span></a><a class="rail-item" href="40-appendix-b-mathematical-basis-calendar-selection.html"><span>Appendix B</span><span>Appendix B - Mathematical Basis &amp; Calendar Selection</span></a><a class="rail-item" href="41-appendix-c-intercalation-expansion-joint-tables.html"><span>Appendix C</span><span>Appendix C - Intercalation &amp; Expansion-Joint Tables</span></a><a class="rail-item" href="42-appendix-d-interplanetary-geometry-the-month-gap-heuristic.html"><span>Appendix D</span><span>Appendix D - Interplanetary Geometry &amp; The Month-Gap Heuristic</span></a><a class="rail-item" href="43-appendix-e-comparative-calendars-design-context.html"><span>Appendix E</span><span>Appendix E - Comparative Calendars &amp; Design Context</span></a><a class="rail-item" href="44-appendix-f-sources-notes-bibliography.html"><span>Appendix F</span><span>Appendix F - Sources, Notes &amp; Bibliography</span></a><a class="rail-item" href="45a-appendix-g-outer-planets-astronomical-reality.html"><span>Appendix G</span><span>Outer Planets: From Idealised Orbits to Astronomical Reality</span></a></div><div class="rail-bottom"></div></aside><div class="reading-main"><div class="reader-top"><a href="../index.html">← BOOK CONTENTS</a><span>APPENDIX A / G</span></div><div class="reader-article"><article><div class="eyebrow">Solarian · Appendices</div><h1 id="a---solarian-protocol-v1.0">A - Solarian Protocol v1.0</h1><h2 id="normative-core-specification">Normative Core Specification</h2><p><strong>Protocol:</strong> Solarian Calendar Protocol<br/>
+<strong>Version:</strong> 1.0<br/>
+<strong>Status:</strong> Candidate normative specification<br/>
+<strong>Author:</strong> Jonathan Bullock<br/>
+<strong>Copyright:</strong> © 2026 Jonathan Bullock<br/>
+<strong>Proposed release licence:</strong> Creative Commons Attribution 4.0 International (CC BY 4.0)</p><p><strong>Recommended attribution:</strong> <em>Solarian Protocol v1.0 — Jonathan Bullock (2026).</em></p><h2 id="a.1-purpose-and-scope">A.1 Purpose and scope</h2><h2 id="a.1.1-purpose">A.1.1 Purpose</h2><p>The Solarian Calendar Protocol defines a common civil-time architecture for human settlements distributed across planets, moons, asteroids, artificial habitats and other locations within the Solar System.</p><p>The protocol is designed to permit locally meaningful civil calendars while retaining enough common structure for those calendars to remain interoperable.</p><p>Solarian does <strong>not</strong> define one identical calendar for every settlement.</p><p>It defines a common grammar from which multiple local calendars can be constructed.</p><p>Its governing design principle is:</p><blockquote>
+<p><strong>One human cadence. Many local astronomical calendars.</strong></p>
+</blockquote><h2 id="a.1.2-functional-separation">A.1.2 Functional separation</h2><p>Solarian separates two functions that terrestrial calendars commonly combine:</p><p><strong>Human operating time</strong></p><blockquote>
+<p>Civil Day → Week → Minth → Mear</p>
+</blockquote><p>and:</p><p><strong>Astronomical orbiting time</strong></p><blockquote>
+<p>Orbital Month → Orbital Year</p>
+</blockquote><p>The human hierarchy exists to provide recurring periods suitable for people, organisations and institutions.</p><p>The astronomical hierarchy exists to represent a settlement's or planetary system's heliocentric orbit.</p><p>The two hierarchies MAY be synchronized where the astronomy permits a useful integer relationship.</p><p>Where no useful integer relationship exists, they SHALL operate independently.</p><h2 id="a.1.3-out-of-scope">A.1.3 Out of scope</h2><p>Solarian is a civil calendar protocol.</p><p>It is not:</p><ul>
+<li><p>an atomic or relativistic timescale;</p></li>
+<li><p>a spacecraft navigation clock;</p></li>
+<li><p>an ephemeris;</p></li>
+<li><p>a timezone system;</p></li>
+<li><p>a local solar-time standard;</p></li>
+<li><p>an eclipse, illumination or radiation model;</p></li>
+<li><p>a communications-delay calculator;</p></li>
+<li><p>a substitute for precision astronomical coordinates.</p></li>
+</ul><p>Such systems MAY coexist with Solarian and SHOULD be used wherever greater physical or temporal precision is required.</p><h2 id="a.2-normative-language">A.2 Normative language</h2><p>The terms <strong>SHALL</strong>, <strong>SHALL NOT</strong>, <strong>SHOULD</strong>, <strong>SHOULD NOT</strong> and <strong>MAY</strong> have the following meanings in this specification.</p><p><strong>SHALL / SHALL NOT</strong> indicate requirements for conformance.</p><p><strong>SHOULD / SHOULD NOT</strong> indicate strong recommendations. A conforming implementation MAY depart from a SHOULD requirement where a documented implementation reason exists.</p><p><strong>MAY</strong> indicates an explicitly permitted option.</p><p>Explanatory notes and examples are non-normative unless stated otherwise.</p><h2 id="a.3-core-definitions">A.3 Core definitions</h2><h2 id="a.3.1-civil-day">A.3.1 Civil day</h2><p>A <strong>civil day</strong> is the smallest ordinary civil calendar unit used by a Solarian implementation.</p><p>The standard Solarian civil day SHALL contain:</p><blockquote>
+<p><strong>86,400 SI seconds</strong></p>
+</blockquote><p>A standard day MAY be divided into twenty-four hours using conventional subdivisions.</p><p>A settlement MAY use a non-standard local civil day where a natural rotational cycle provides a compelling human-scale civil rhythm.</p><p>Any such implementation SHALL:</p><ol type="1">
+<li><p>declare the duration and physical definition of its civil day;</p></li>
+<li><p>retain the seven-position week defined by A.3.2;</p></li>
+<li><p>preserve uninterrupted local weekday continuity; and</p></li>
+<li><p>define a deterministic mapping to common chronology and the Solarian Week Index.</p></li>
+</ol><p>Mars, using the Martian sol, is the canonical non-standard-day implementation.</p><h2 id="a.3.2-week">A.3.2 Week</h2><p>A <strong>week</strong> consists of exactly seven consecutive civil days.</p><p>The seven structural weekday positions SHALL recur continuously and SHALL NOT be interrupted, reset or supplemented by days outside the weekly sequence.</p><p>The reference weekday names are:</p><blockquote>
+<p><strong>Monday · Tuesday · Wednesday · Thursday · Friday · Saturday · Sunday</strong></p>
+</blockquote><p>These names are reference vocabulary only.</p><p>Local languages and cultures MAY use different weekday names, provided the seven structural positions and their order remain unambiguous.</p><p>The protocol principle is absolute:</p><blockquote>
+<p><strong>Solarian never breaks the week.</strong></p>
+</blockquote><h2 id="a.3.3-minth">A.3.3 Minth</h2><p>A <strong>minth</strong> is one of twelve recurring structural positions within the human operating mear.</p><p>The term derives from <em>mini-month</em> but SHALL NOT be interpreted as an astronomical month.</p><p>The twelve minth identifiers are:</p><blockquote>
+<p><strong>A · B · C · D · E · F · G · H · I · J · K · L</strong></p>
+</blockquote><p>A normal minth contains:</p><blockquote>
+<p><strong>4 complete weeks</strong></p>
+</blockquote><p>A synchronized implementation MAY adjust a designated minth to:</p><blockquote>
+<p><strong>3 weeks<br/>
+</strong>or<br/>
+<strong>5 weeks</strong></p>
+</blockquote><p>in accordance with Section A.8.</p><p>A standard independent implementation SHALL retain four-week human minths unless a separately declared local operating convention exists outside the astronomical synchronization mechanism.</p><p>The identifiers A–L are structural identities and SHALL remain available beneath any local cultural names.</p><h2 id="a.3.4-mear">A.3.4 Mear</h2><p>A <strong>mear</strong> is the complete twelve-minth human operating cycle.</p><p>The term derives from <em>mini-year</em>.</p><p>One mear SHALL always contain:</p><blockquote>
+<p><strong>12 minths</strong></p>
+</blockquote><p>A mear is therefore structurally defined by its twelve minth positions rather than by a fixed number of weeks.</p><p>Its nominal duration is:</p><blockquote>
+<p><strong>12 × 4 = 48 weeks</strong></p>
+</blockquote><p>In a synchronized implementation, expansion-joint adjustments MAY cause an individual mear to contain fewer or more than forty-eight weeks while remaining one complete mear.</p><p>In a standard independent implementation, a human operating mear SHALL normally remain:</p><blockquote>
+<p><strong>48 weeks</strong></p>
+</blockquote><p>The term <strong>year</strong> SHALL NOT be used as a synonym for mear in normative Solarian terminology.</p><h2 id="a.3.5-orbital-month">A.3.5 Orbital month</h2><p>An <strong>orbital month</strong>, or <strong>month</strong> where the context is unambiguous, is one of twelve civil divisions of a local heliocentric orbital year.</p><p>The twelve structural month identities are:</p><blockquote>
+<p><strong>1 · 2 · 3 · 4 · 5 · 6 · 7 · 8 · 9 · 10 · 11 · 12</strong></p>
+</blockquote><p>An orbital month is defined by its position within the astronomical year, not by a fixed duration.</p><p>A month MAY therefore last one week, several weeks, several Earth years or longer, depending on the local orbit.</p><p>The term <strong>minth</strong> SHALL NOT be used for an orbital month.</p><h2 id="a.3.6-orbital-year">A.3.6 Orbital year</h2><p>A <strong>year</strong>, unless otherwise qualified, is one complete heliocentric orbit of the relevant world, planetary system or independently orbiting settlement.</p><p>The astronomical year belongs to the orbit.</p><p>It SHALL NOT be redefined merely to preserve a familiar human-scale duration.</p><p>The protocol therefore distinguishes:</p><blockquote>
+<p><strong>mear = human operating cycle</strong></p>
+</blockquote><p>from:</p><blockquote>
+<p><strong>year = heliocentric orbital cycle</strong></p>
+</blockquote><p>This distinction is normative.</p><h2 id="a.3.7-physical-orbit-and-civil-orbital-calendar">A.3.7 Physical orbit and civil orbital calendar</h2><p>A physical orbit is continuous.</p><p>A Solarian astronomical calendar is a discrete civil representation of that orbit.</p><p>A conforming implementation SHALL distinguish between:</p><ol type="1">
+<li><p>the continuously evolving physical orbital state; and</p></li>
+<li><p>the whole-week civil calendar used to represent it.</p></li>
+</ol><p>Solarian orbital months SHALL NOT be represented as substitutes for precision ephemerides.</p><h2 id="a.4-human-operating-calendar">A.4 Human operating calendar</h2><h2 id="a.4.1-standard-hierarchy">A.4.1 Standard hierarchy</h2><p>The standard human operating hierarchy is:</p><blockquote>
+<p><strong>7 civil days = 1 week<br/>
+4 weeks = 1 normal minth<br/>
+12 minths = 1 mear</strong></p>
+</blockquote><p>The nominal mear therefore contains forty-eight weeks.</p><h2 id="a.4.2-continuous-sequence">A.4.2 Continuous sequence</h2><p>The weekday sequence SHALL continue uninterrupted across:</p><ul>
+<li><p>minth boundaries;</p></li>
+<li><p>mear boundaries;</p></li>
+<li><p>orbital-month boundaries;</p></li>
+<li><p>orbital-year boundaries; and</p></li>
+<li><p>all intercalation events.</p></li>
+</ul><p>No conforming implementation SHALL create:</p><ul>
+<li><p>blank days outside the week;</p></li>
+<li><p>weekday resets;</p></li>
+<li><p>isolated leap days;</p></li>
+<li><p>omitted weekdays; or</p></li>
+<li><p>duplicated weekdays for calendar correction.</p></li>
+</ul><h2 id="a.4.3-minth-sequence">A.4.3 Minth sequence</h2><p>The minth sequence SHALL be:</p><blockquote>
+<p><strong>A → B → C → D → E → F → G → H → I → J → K → L → A</strong></p>
+</blockquote><p>Minth A SHALL begin each new mear.</p><p>The sequence SHALL NOT acquire additional letters when an orbital year becomes longer.</p><p>Long astronomical years SHALL be handled through repetition of the A–L cycle rather than expansion of the human vocabulary.</p><h2 id="a.4.4-human-hierarchy-limit">A.4.4 Human hierarchy limit</h2><p>Solarian defines no mandatory human operating unit above the mear.</p><p>Quarters, semesters, terms, fiscal periods, decades and other groupings MAY be defined locally or organisationally.</p><p>Such derived units SHALL NOT alter the underlying week–minth–mear structure.</p><h2 id="a.5-astronomical-calendar">A.5 Astronomical calendar</h2><h2 id="a.5.1-heliocentric-year">A.5.1 Heliocentric year</h2><p>A standard Solarian astronomical calendar SHALL be associated with a declared heliocentric orbit.</p><p>For a planet, dwarf planet, asteroid or independently orbiting artificial settlement, the relevant year is its own heliocentric orbit.</p><p>For natural satellites, Section A.11 applies.</p><h2 id="a.5.2-common-year-start-direction">A.5.2 Common year-start direction</h2><p>Standard Solarian astronomical calendars SHALL share one canonical heliocentric year-start direction:</p><blockquote>
+<p><strong>λ₀ = 100°</strong></p>
+</blockquote><p>The precise reference frame and astronomical realisation of λ₀ SHALL be defined by the applicable Solarian astronomical reference specification and implementation profile.</p><p>The same canonical direction SHALL be used across standard Solarian orbital calendars.</p><p>A civil orbital year SHALL begin on a whole-week boundary selected and intercalated so as to represent successive passages through the canonical year-start direction.</p><h2 id="a.5.3-twelve-orbital-months">A.5.3 Twelve orbital months</h2><p>A standard astronomical year SHALL contain exactly twelve orbital months.</p><p>Month numbering SHALL begin at Month 1 and proceed sequentially to Month 12 before repeating at the next civil orbital year.</p><p>Orbital-month boundaries SHALL occur only at whole-week boundaries.</p><h2 id="a.5.4-equal-time-preference">A.5.4 Equal-time preference</h2><p>Standard Solarian orbital months SHOULD be as even in elapsed civil duration as whole-week quantisation and the implementation architecture reasonably permit.</p><p>They are not required to represent equal angular sectors.</p><p>A standard implementation SHALL satisfy the separately ratified Solarian Orbital-Phase Fidelity Standard 1.0.0, evaluated at actual civil orbital-month starts over a declared window. A phase score of no more than 30° is standard-potential only; values above 30° and no more than 45° require individual review, and values above 45° require specialised astronomical treatment under A.13. Passing this phase metric does not itself confer complete protocol conformance.</p><p>Where this condition cannot be satisfied, Section A.13 applies.</p><p>A civil orbital month is primarily an elapsed-time unit. Its suitability as a proxy for angular orbital position is a separate, measurable question. Under the independently ratified Solarian Orbital-Phase Fidelity Standard 1.0.0, the maximum angular deviation at actual civil orbital-month starts is evaluated against a 30° standard limit and a 45° specialised-treatment threshold. A dated implementation must disclose the astronomical source, observation window and expansion-joint layout from which that measurement was derived. These criteria belong to the separately ratified technical standard; this paragraph explains them but does not itself constitute an amendment to the protocol text.</p><h2 id="a.5.5-the-monday-rule">A.5.5 The Monday Rule</h2><p>Every standard Solarian:</p><ul>
+<li><p>minth;</p></li>
+<li><p>mear;</p></li>
+<li><p>orbital month; and</p></li>
+<li><p>orbital year</p></li>
+</ul><p>SHALL begin on the first structural weekday.</p><p>Using the reference weekday vocabulary, this is Monday.</p><p>Every such unit SHALL consequently end on the seventh structural weekday.</p><p>Using the reference vocabulary, this is Sunday.</p><p>This requirement is known as the <strong>Monday Rule</strong>.</p><h2 id="a.6-implementation-regimes">A.6 Implementation regimes</h2><p>Solarian defines two standard relationships between the human and astronomical calendars.</p><h2 id="a.6.1-synchronized-regime">A.6.1 Synchronized regime</h2><p>A <strong>synchronized implementation</strong> connects the human and astronomical calendars through an integer Repeat Factor.</p><p>A synchronized implementation SHALL satisfy Section A.7.</p><p>The human and astronomical hierarchies nest structurally.</p><h2 id="a.6.2-independent-regime">A.6.2 Independent regime</h2><p>An <strong>independent implementation</strong> uses the human and astronomical calendars simultaneously but does not require them to nest.</p><p>In an independent implementation:</p><ul>
+<li><p>human minths and mears continue on their own recurring sequence;</p></li>
+<li><p>the orbital calendar continues through twelve months and one local year;</p></li>
+<li><p>a mear boundary need not coincide with an orbital-year boundary;</p></li>
+<li><p>a minth boundary need not coincide with an orbital-month boundary; and</p></li>
+<li><p>no Repeat Factor is defined.</p></li>
+</ul><p>The absence of a Repeat Factor SHALL NOT be treated as a protocol failure.</p><p>Independent operation is a standard Solarian regime.</p><h2 id="a.6.3-no-fractional-repeat-factor">A.6.3 No fractional Repeat Factor</h2><p>A fractional Repeat Factor SHALL NOT be used.</p><p>Values such as R0.67 or R2.5 do not represent the structural relationship defined by this protocol and SHALL NOT be described as Solarian Repeat Factors.</p><p>Where no useful positive integer relationship exists, the implementation SHALL use the independent regime or a declared specialised astronomical implementation.</p><h2 id="a.7-repeat-factor">A.7 Repeat Factor</h2><h2 id="a.7.1-definition">A.7.1 Definition</h2><p>For a synchronized implementation, the <strong>Repeat Factor</strong>, written <strong>R</strong>, is defined as:</p><blockquote>
+<p><strong>R = minths per orbital month = mears per orbital year</strong></p>
+</blockquote><p>R SHALL be a positive integer.</p><h2 id="a.7.2-consequences">A.7.2 Consequences</h2><p>For a synchronized R implementation:</p><blockquote>
+<p><strong>R mears = 1 orbital year</strong></p>
+<p><strong>R minths = 1 orbital month</strong></p>
+</blockquote><p>and therefore:</p><blockquote>
+<p><strong>12R minths = 1 orbital year</strong></p>
+</blockquote><p>The nominal whole-week length of the synchronized year is:</p><blockquote>
+<p><strong>W₀ = 48R</strong></p>
+</blockquote><p>where W₀ is measured in local civil weeks.</p><h2 id="a.7.3-structural-alignment">A.7.3 Structural alignment</h2><p>A synchronized orbital year SHALL begin:</p><ul>
+<li><p>at a mear boundary;</p></li>
+<li><p>at Minth A; and</p></li>
+<li><p>at the first structural weekday.</p></li>
+</ul><p>Every orbital month SHALL begin at a minth boundary.</p><p>Every orbital month SHALL contain exactly R minths.</p><p>Expansion-joint changes MAY alter the realised number of weeks in those minths but SHALL NOT change their count, order or structural identity.</p><h2 id="a.7.4-selection-of-r">A.7.4 Selection of R</h2><p>An implementation profile SHALL declare its Repeat Factor.</p><p>The selected R SHOULD normally be the positive integer that provides the most useful synchronization between the nominal 48-week mear and the local physical orbital year, subject to:</p><ol type="1">
+<li><p>bounded whole-week intercalation;</p></li>
+<li><p>preservation of useful human minth durations;</p></li>
+<li><p>the available expansion-joint capacity;</p></li>
+<li><p>acceptable orbital-month phase fidelity; and</p></li>
+<li><p>overall structural simplicity.</p></li>
+</ol><p>The nearest integer to the physical-year duration divided by forty-eight weeks is normally the first candidate.</p><p>It is not automatically valid.</p><p>If no candidate produces a useful standard synchronized calendar, the independent regime SHALL be considered.</p><h2 id="a.8-whole-week-quantisation-and-expansion-joints">A.8 Whole-week quantisation and expansion joints</h2><h2 id="a.8.1-smallest-civil-adjustment">A.8.1 Smallest civil adjustment</h2><p>The complete week is the smallest unit of Solarian calendar correction.</p><p>Intercalation SHALL therefore occur only in whole weeks.</p><h2 id="a.8.2-normal-minth">A.8.2 Normal minth</h2><p>A normal minth contains four weeks.</p><p>For synchronized implementations, a designated expansion-joint minth MAY take one of three realised lengths:</p><blockquote>
+<p><strong>3 weeks · 4 weeks · 5 weeks</strong></p>
+</blockquote><p>No other minth duration is part of the standard synchronized protocol.</p><h2 id="a.8.3-primary-expansion-joint">A.8.3 Primary expansion joint</h2><p>Minth <strong>L</strong>, the final minth of every mear, is the <strong>primary expansion joint</strong>.</p><p>Where a synchronized calendar requires adjustment from its nominal 48R-week structure, primary Minth L positions SHALL be used before secondary expansion joints are introduced.</p><p>A primary L may:</p><ul>
+<li><p>contract from four weeks to three; or</p></li>
+<li><p>expand from four weeks to five.</p></li>
+</ul><p>A single adjusted L therefore changes the realised year length by exactly one week.</p><h2 id="a.8.4-secondary-expansion-joints">A.8.4 Secondary expansion joints</h2><p>Where the total required adjustment exceeds the practical capacity of the available primary L positions, other minths MAY be designated as <strong>secondary expansion joints</strong>.</p><p>A secondary expansion joint SHALL:</p><ul>
+<li><p>remain one of the existing A–L minths;</p></li>
+<li><p>retain its normal structural identity;</p></li>
+<li><p>change by no more than one week from the four-week norm; and</p></li>
+<li><p>be declared in the implementation profile.</p></li>
+</ul><p>Secondary expansion joints SHALL NOT create additional minths or alter the A–L sequence.</p><h2 id="a.8.5-distribution-priority-synchronized-regime">A.8.5 Distribution priority — synchronized regime</h2><p>When locating adjusted minths within a synchronized civil year, an implementation profile SHALL apply the following priority order.</p><p><strong>Priority 1 — Preserve structural invariants.<br/>
+</strong>Week continuity, twelve minths per mear, R minths per orbital month and R mears per year SHALL take precedence over all distribution preferences.</p><p><strong>Priority 2 — Use primary joints first.<br/>
+</strong>Mear-terminal Minth L positions SHALL absorb the required adjustment before secondary minths are used.</p><p><strong>Priority 3 — Distribute primary adjustments.<br/>
+</strong>Where more than one Minth L is adjusted, the adjusted mears SHOULD be distributed as evenly as practicable across the orbital year rather than clustered unnecessarily.</p><p><strong>Priority 4 — Balance orbital months.<br/>
+</strong>Where several equally valid distributions exist, the arrangement SHOULD minimise unnecessary variation between orbital-month durations and SHOULD preserve useful repeated patterns.</p><p><strong>Priority 5 — Add secondary joints evenly.<br/>
+</strong>Where secondary expansion joints are necessary, they SHOULD be distributed as evenly as practicable through the affected mears and orbital year. Clustering several adjusted minths together SHOULD be avoided unless required to preserve a higher-priority structural property.</p><p><strong>Priority 6 — Preserve the simpler year form.<br/>
+</strong>Where Common and Leap year forms differ by a single week, the two forms SHOULD share as much of the same expansion-joint pattern as practical. The additional contraction or expansion SHOULD normally occur at the latest suitable designated joint, preferably the final Minth L where that does not conflict with a higher-priority requirement.</p><p><strong>Priority 7 — Make placement deterministic.<br/>
+</strong>The exact location of every adjusted minth SHALL be published in the implementation profile or its associated deterministic generation rule.</p><p>This protocol defines the placement principles.</p><p>Appendix E and individual implementation profiles define the exact schedules.</p><h2 id="a.8.6-example-of-secondary-distribution">A.8.6 Example of secondary distribution</h2><p>Earth R1 illustrates the intended logic.</p><p>A nominal mear contains forty-eight weeks.</p><p>The 52-week Common Year requires four expansions. Minth L acts as the primary joint, while three secondary joints are distributed through the mear, producing:</p><blockquote>
+<p><strong>4 · 4 · 5 | 4 · 4 · 5 | 4 · 4 · 5 | 4 · 4 · 5</strong></p>
+</blockquote><p>The 53-week Leap form retains that structure and adds a further late secondary expansion:</p><blockquote>
+<p><strong>4 · 4 · 5 | 4 · 4 · 5 | 4 · 4 · 5 | 4 · 5 · 5</strong></p>
+</blockquote><p>This example is informative for the distribution principle; the authoritative Earth profile is defined separately.</p><h2 id="a.9-independent-regime-whole-week-structure">A.9 Independent-regime whole-week structure</h2><h2 id="a.9.1-human-layer">A.9.1 Human layer</h2><p>In a standard independent implementation, astronomical intercalation SHALL NOT modify the human operating mear.</p><p>The standard human sequence SHALL remain:</p><blockquote>
+<p><strong>12 × 4-week minths = 48 weeks</strong></p>
+</blockquote><p>continuously repeating.</p><p>Astronomical New Year and orbital-month boundaries MAY occur within a human mear or minth.</p><h2 id="a.9.2-astronomical-year">A.9.2 Astronomical year</h2><p>The independent astronomical calendar SHALL remain constructed from whole civil weeks.</p><p>Its civil year SHALL use one or more deterministic whole-week year forms that keep the discrete astronomical calendar bounded to the underlying physical orbit.</p><h2 id="a.9.3-orbital-month-allocation">A.9.3 Orbital-month allocation</h2><p>For a standard independent astronomical year containing <strong>W</strong> weeks, those weeks SHALL be distributed across twelve orbital months.</p><p>Where mathematically possible, orbital-month durations SHOULD differ by no more than one week.</p><p>The distribution SHOULD follow this priority order:</p><p><strong>Priority 1 — Whole weeks only.<br/>
+</strong>Every orbital month SHALL contain an integer number of weeks.</p><p><strong>Priority 2 — Minimise month-duration variance.<br/>
+</strong>The twelve months SHOULD be as equal in duration as possible.</p><p><strong>Priority 3 — Distribute unequal months evenly.<br/>
+</strong>Longer or shorter months SHOULD be spaced through the year rather than unnecessarily clustered.</p><p><strong>Priority 4 — Preserve simple repeating patterns.<br/>
+</strong>Where an evenly distributed repeating pattern is available, it SHOULD be preferred.</p><p><strong>Priority 5 — Preserve adjacent year-form similarity.<br/>
+</strong>Where Common and Leap forms differ by one week, the two month patterns SHOULD remain identical for as much of the year as practical.</p><p><strong>Priority 6 — Place the distinguishing week late.<br/>
+</strong>Where several equally satisfactory placements exist, the additional or removed week SHOULD normally be assigned to the latest suitable orbital month, with Month 12 preferred for a single year-form difference.</p><p>The Venusian 32-week pattern:</p><blockquote>
+<p><strong>3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 2</strong></p>
+</blockquote><p>and 33-week alternate:</p><blockquote>
+<p><strong>3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 2 | 3 · 3 · 3</strong></p>
+</blockquote><p>illustrate this rule.</p><h2 id="a.9.4-minimum-standard-astronomical-year">A.9.4 Minimum standard astronomical year</h2><p>A standard twelve-month whole-week astronomical calendar requires enough civil weeks to assign meaningful whole-week month positions.</p><p>Where the local orbital year is too short to support the standard twelve-month whole-week structure, a specialised astronomical implementation SHALL be used.</p><h2 id="a.10-common-years-leap-years-and-intercalation">A.10 Common Years, Leap Years and intercalation</h2><h2 id="a.10.1-year-form-nomenclature">A.10.1 Year-form nomenclature</h2><p>Solarian defines year forms by parity.</p><p>A civil orbital year containing an <strong>even number of weeks</strong> SHALL be called a:</p><blockquote>
+<p><strong>Common Year</strong></p>
+</blockquote><p>A civil orbital year containing an <strong>odd number of weeks</strong> SHALL be called a:</p><blockquote>
+<p><strong>Leap Year</strong></p>
+</blockquote><p>This convention applies in both synchronized and independent regimes.</p><h2 id="a.10.2-leap-does-not-mean-longer">A.10.2 Leap does not mean longer</h2><p>The term <strong>Leap Year</strong> identifies the odd-week year form.</p><p>It SHALL NOT imply that the Leap Year:</p><ul>
+<li><p>is longer;</p></li>
+<li><p>is less frequent; or</p></li>
+<li><p>receives an additional week.</p></li>
+</ul><p>A Leap Year MAY be shorter than the Common Year.</p><p>Mars, for example, uses a 96-week Common Year and a 95-week Leap Year.</p><h2 id="a.10.3-adjacent-year-forms">A.10.3 Adjacent year forms</h2><p>Standard implementations SHOULD normally use adjacent whole-week year forms where those forms provide the appropriate long-run approximation to the physical orbit.</p><p>Because adjacent integers have opposite parity, one will be Common and the other Leap.</p><h2 id="a.10.4-leap-week-intercalation-week">A.10.4 Leap week / intercalation week</h2><p>The single week distinguishing adjacent Common and Leap year forms MAY be described informally as the <strong>leap week</strong>.</p><p>Where direction matters, normative technical material SHOULD use the more neutral term:</p><blockquote>
+<p><strong>intercalation week</strong></p>
+</blockquote><p>because the odd-week Leap form may contain either one more or one fewer week than the even-week Common form.</p><h2 id="a.10.5-long-run-alignment">A.10.5 Long-run alignment</h2><p>Every implementation profile using multiple year forms SHALL define a deterministic intercalation rule.</p><p>That rule SHALL:</p><ol type="1">
+<li><p>specify which year form applies to every civil orbital year;</p></li>
+<li><p>prevent unbounded long-run drift between the civil calendar and the reference physical orbit;</p></li>
+<li><p>preserve whole-week boundaries; and</p></li>
+<li><p>be reproducible by independent implementations.</p></li>
+</ol><p>The Solarian Protocol does not impose one universal leap sequence on every world.</p><p>Different physical orbits require different intercalation schedules.</p><h2 id="a.11-planetary-systems-moons-and-artificial-worlds">A.11 Planetary systems, moons and artificial worlds</h2><h2 id="a.11.1-natural-satellites">A.11.1 Natural satellites</h2><p>A natural satellite within a planetary system SHOULD use the heliocentric astronomical calendar of its parent planetary system.</p><p>Accordingly:</p><ul>
+<li><p>the Galilean moons normally use the Jovian year;</p></li>
+<li><p>Titan and Enceladus normally use the Saturnian year;</p></li>
+<li><p>major Uranian moons normally use the Uranian year;</p></li>
+<li><p>Triton normally uses the Neptunian year;</p></li>
+<li><p>Earth's Moon normally uses the Earth year; and</p></li>
+<li><p>Phobos and Deimos normally use the Martian year.</p></li>
+</ul><p>The satellite's own local orbital cycle MAY be represented separately for illumination, eclipses, transport, radiation, environmental operations or local culture.</p><p>A local moon orbit SHALL NOT automatically become a competing civil year.</p><h2 id="a.11.2-independent-artificial-habitats">A.11.2 Independent artificial habitats</h2><p>A permanent artificial settlement in a stable independent heliocentric orbit MAY possess its own Solarian astronomical year.</p><p>Its structural form SHALL be determined from that orbit using the same protocol as a natural independently orbiting world.</p><h2 id="a.11.3-planetary-system-habitats">A.11.3 Planetary-system habitats</h2><p>An artificial habitat operating as part of a planetary system MAY inherit that system's astronomical calendar.</p><h2 id="a.11.4-mobile-settlements">A.11.4 Mobile settlements</h2><p>A spacecraft, travelling settlement or artificial habitat without a persistent heliocentric orbit of civil significance MAY omit the astronomical calendar entirely.</p><p>It MAY continue using only:</p><blockquote>
+<p><strong>Civil Day → Week → Minth → Mear</strong></p>
+</blockquote><p>Such an implementation remains conformant with the Solarian human operating layer.</p><h2 id="a.12-names-identifiers-and-reference-notation">A.12 Names, identifiers and reference notation</h2><h2 id="a.12.1-protocol-identities-and-local-culture">A.12.1 Protocol identities and local culture</h2><p>Protocol identifiers SHALL be distinguishable from local cultural names.</p><p>A conforming settlement MAY replace reference names in ordinary use, provided the underlying structural identities remain recoverable.</p><p>The governing principle is:</p><blockquote>
+<p><strong>Common structure; local culture.</strong></p>
+</blockquote><h2 id="a.12.2-minth-identifiers">A.12.2 Minth identifiers</h2><p>The canonical structural minth identifiers SHALL be:</p><blockquote>
+<p><strong>A through L</strong></p>
+</blockquote><p>These SHALL remain stable regardless of local names.</p><h2 id="a.12.3-orbital-month-identifiers">A.12.3 Orbital-month identifiers</h2><p>The canonical structural month identifiers SHALL be:</p><blockquote>
+<p><strong>1 through 12</strong></p>
+</blockquote><p>These numeric identities are authoritative.</p><h2 id="a.12.4-reference-month-stems">A.12.4 Reference month stems</h2><p>Solarian defines the following optional human-readable reference stems:</p><table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 66%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Month</strong></th>
+<th><strong>Reference stem</strong></th>
+</tr>
+<tr class="odd">
+<th>1</th>
+<th>Jan</th>
+</tr>
+<tr class="header">
+<th>2</th>
+<th>Feb</th>
+</tr>
+<tr class="odd">
+<th>3</th>
+<th>Mar</th>
+</tr>
+<tr class="header">
+<th>4</th>
+<th>Apr</th>
+</tr>
+<tr class="odd">
+<th>5</th>
+<th>May</th>
+</tr>
+<tr class="header">
+<th>6</th>
+<th>Jun</th>
+</tr>
+<tr class="odd">
+<th>7</th>
+<th>Jul</th>
+</tr>
+<tr class="header">
+<th>8</th>
+<th>Aug</th>
+</tr>
+<tr class="odd">
+<th>9</th>
+<th>Sep</th>
+</tr>
+<tr class="header">
+<th>10</th>
+<th>Oct</th>
+</tr>
+<tr class="odd">
+<th>11</th>
+<th>Nov</th>
+</tr>
+<tr class="header">
+<th>12</th>
+<th>Dec</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table><p>These stems are reference notation and do not require a local society to retain terrestrial month names.</p><h2 id="a.12.5-worldsystem-suffix">A.12.5 World/system suffix</h2><p>A canonical reference label MAY combine the reference month stem with the registered three-letter profile suffix for the relevant world or planetary system.</p><p>The syntax is:</p><blockquote>
+<p><strong>&lt;MonthStem&gt;&lt;profile-suffix&gt;</strong></p>
+</blockquote><p>Examples include:</p><blockquote>
+<p><strong>Janmar</strong> = Martian Orbital Month 1<br/>
+<strong>Janjov</strong> = Jovian Orbital Month 1<br/>
+<strong>Julsat</strong> = Saturnian Orbital Month 7<br/>
+<strong>Jannep</strong> = Neptunian Orbital Month 1<br/>
+<strong>Janven</strong> = Venusian Orbital Month 1<br/>
+<strong>Janmer</strong> = Mercurian Orbital Month 1</p>
+</blockquote><p>Profile suffixes SHALL be unique within the canonical implementation registry.</p><p>The reference label SHALL be treated as an alias for the numeric orbital-month identity, not as the mandatory local cultural name.</p><h2 id="a.12.6-earth-reference-notation">A.12.6 Earth reference notation</h2><p>Earth MAY retain the familiar unsuffixed reference forms Jan–Dec in Earth-local contexts.</p><p>Cross-world machine records SHALL identify the relevant calendar profile independently and SHALL NOT rely solely on a human-readable month name.</p><h2 id="a.12.7-repeat-factor-notation">A.12.7 Repeat Factor notation</h2><p>A synchronized implementation SHOULD be described compactly as:</p><blockquote>
+<p><strong>R1 · R2 · R3 · R5 · R13 · R32</strong></p>
+</blockquote><p>and so on.</p><p>Formal mathematical text MAY use:</p><blockquote>
+<p><strong>R = 13</strong></p>
+</blockquote><p>A profile with no Repeat Factor SHALL be identified as <strong>Independent</strong>, not R0 or a fractional R.</p><h2 id="a.12.8-eras-and-year-numbers">A.12.8 Eras and year numbers</h2><p>Solarian v1.0 does not impose one universal cultural era for local year numbering.</p><p>Each implementation profile SHALL define or reference an unambiguous local year-numbering system if local numbered years are used.</p><p>Local eras SHALL remain deterministically convertible to common chronology.</p><h2 id="a.13-astronomical-applicability-and-graceful-failure">A.13 Astronomical applicability and graceful failure</h2><h2 id="a.13.1-standard-astronomical-applicability">A.13.1 Standard astronomical applicability</h2><p>A standard Solarian astronomical calendar assumes that its twelve whole-week orbital months remain a useful low-resolution representation of progress through the heliocentric orbit.</p><p>This assumption SHALL be evaluated for each proposed astronomical implementation profile using the declared physical target, reference frame, ephemeris, deterministic month-boundary ledger, maximum angular month-start deviation and evaluation window, in accordance with the separately ratified Solarian Orbital-Phase Fidelity Standard 1.0.0. Numerical phase conformity alone SHALL NOT constitute full implementation-profile certification.</p><p>The phase test distinguishes a standard-potential result (maximum deviation up to and including 30°), a marginal result requiring individual review (more than 30° and up to and including 45°), and a case requiring specialised astronomical treatment (more than 45°). A marginal result is not an automatic standard approval or an automatic failure. That judgement is recorded separately and does not affect the civil week, the human operating mear or the existence of the physical orbital year.</p><h2 id="a.13.2-phase-fidelity-failure">A.13.2 Phase-fidelity failure</h2><p>Where orbital eccentricity, orientation or other geometry causes the standard equal-time whole-week month structure to become an inadequate representation of orbital phase, the implementation SHALL NOT conceal that failure by simply relaxing the definition of success.</p><p>Where the recorded maximum deviation is greater than 30° but not greater than 45°, the implementation SHALL undergo an individually recorded marginal-applicability review. It SHALL NOT be claimed as a standard phase-metric pass merely because its result falls below 45°. Where the deviation exceeds 45°, the standard twelve-month phase proxy SHALL be classified as requiring specialised astronomical treatment. No adjustment of the acceptance thresholds or retroactive selection of expansion joints to secure a preferred outcome is permitted.</p><h2 id="a.13.3-localised-failure">A.13.3 Localised failure</h2><p>Failure of the standard astronomical month representation SHALL NOT invalidate:</p><ul>
+<li><p>the civil day;</p></li>
+<li><p>the seven-position week;</p></li>
+<li><p>minths;</p></li>
+<li><p>mears;</p></li>
+<li><p>the SWI mapping; or</p></li>
+<li><p>the existence of the physical heliocentric year.</p></li>
+</ul><p>A specialised implementation MAY replace or omit the standard twelve-month astronomical representation while retaining the Solarian human layer.</p><h2 id="a.13.4-no-artificial-universal-coverage">A.13.4 No artificial universal coverage</h2><p>A conforming protocol extension SHALL NOT redefine the standard Solarian astronomical layer solely to claim coverage of an otherwise non-conforming orbit.</p><p>Exceptions SHALL be explicit and versioned.</p><h2 id="a.14-solarian-week-index">A.14 Solarian Week Index</h2><h2 id="a.14.1-name">A.14.1 Name</h2><p>The common whole-week coordinate defined by Solarian v1.0 is the: <strong>Solarian Week Index</strong></p><p>Abbreviated: <strong>SWI</strong></p><h2 id="a.14.2-function">A.14.2 Function</h2><p>SWI is a monotonically increasing integer coordinate identifying consecutive standard Solarian weeks.</p><p>SWI is <strong>not</strong> a third calendar.</p><p>It has no months, years, seasons, holidays or local cultural meaning.</p><p>Its purpose is to answer one question:</p><blockquote>
+<p><strong>Which shared standard week is this?</strong></p>
+</blockquote><h2 id="a.14.3-swi-epoch">A.14.3 SWI epoch</h2><p>The canonical epoch is:</p><blockquote>
+<p><strong>SWI 1 begins Monday, 10 April 1961</strong></p>
+</blockquote><p>SWI 1 comprises the seven consecutive standard weekday positions corresponding to:</p><blockquote>
+<p><strong>Monday 10 April 1961 through Sunday 16 April 1961</strong></p>
+</blockquote><p>in the terrestrial Gregorian reference calendar.</p><p>The choice is commemorative rather than astronomical.</p><p><strong>Note:</strong> that week contains 12 April 1961, the date of Yuri Gagarin's first human spaceflight.</p><h2 id="a.14.4-sequence">A.14.4 Sequence</h2><p>The following standard week is:</p><blockquote>
+<p><strong>SWI 2</strong></p>
+</blockquote><p>and the count SHALL increase by one for every subsequent complete standard week.</p><p>For historical interoperability, the count MAY be extended proleptically backwards:</p><blockquote>
+<p><strong>SWI 0</strong> = immediately preceding standard week<br/>
+<strong>SWI −1</strong> = the week before SWI 0</p>
+</blockquote><p>and so forth.</p><p>The epoch SHALL NOT cause any reset in the underlying weekday sequence.</p><p>It is an indexing origin only.</p><h2 id="a.14.5-standard-day-settlements">A.14.5 Standard-day settlements</h2><p>A standard-day Solarian settlement SHALL align its seven-position weekday phase with SWI.</p><p>Accordingly, for all standard-day conforming implementations:</p><ul>
+<li><p>SWI begins on the first structural weekday;</p></li>
+<li><p>the first SWI day corresponds to Monday in reference notation;</p></li>
+<li><p>the seventh corresponds to Sunday; and</p></li>
+<li><p>one local standard week corresponds exactly to one SWI interval.</p></li>
+</ul><p>Local weekday names MAY differ.</p><p>The structural phase SHALL not.</p><h2 id="a.14.6-swi-and-local-calendars">A.14.6 SWI and local calendars</h2><p>A local orbital month, minth, mear or year SHALL NOT be required to begin at the same SWI number as the corresponding unit on another world.</p><p>Different local calendars SHALL draw their boundaries independently on the shared standard-week lattice.</p><p>SWI identifies the underlying week, not the local calendar position.</p><h2 id="a.14.7-non-standard-day-settlements">A.14.7 Non-standard-day settlements</h2><p>A non-standard-day settlement such as Mars SHALL retain its own uninterrupted local seven-day or seven-sol week.</p><p>Because such a local week does not have the same physical duration as a standard SWI week, it SHALL NOT be described as identical to one SWI interval.</p><p>Events on that settlement SHALL instead map deterministically to the SWI through common chronology.</p><p>A local Martian week MAY be associated for convenience with the SWI containing its starting instant, but such an association SHALL NOT imply duration equality.</p><p>The exact machine conversion is specified by the interoperability profile.</p><h2 id="a.14.8-swi-resolution">A.14.8 SWI resolution</h2><p>SWI is a weekly coordinate.</p><p>It SHALL NOT be used as a substitute for a higher-resolution timestamp where day, hour, minute, second or sub-second ordering matters.</p><h2 id="a.14.9-swi-notation">A.14.9 SWI notation</h2><p>Human-readable notation SHOULD use:</p><blockquote>
+<p><strong>SWI 18432</strong></p>
+</blockquote><p>Machine-readable representation is defined by the Solarian interoperability specification.</p><h2 id="a.15-common-chronology-and-interoperability">A.15 Common chronology and interoperability</h2><h2 id="a.15.1-common-chronology-requirement">A.15.1 Common chronology requirement</h2><p>Local Solarian calendars SHALL be capable of deterministic mapping to a shared chronological reference where cross-world ordering is required.</p><p>Solarian v1.0 does not require that the cultural presentation of this common chronology remain permanently Gregorian.</p><p>It requires continuity and convertibility.</p><h2 id="a.15.2-multiple-valid-coordinates">A.15.2 Multiple valid coordinates</h2><p>One event MAY simultaneously possess:</p><ul>
+<li><p>a local civil date;</p></li>
+<li><p>a common chronological timestamp; and</p></li>
+<li><p>an SWI coordinate.</p></li>
+</ul><p>These coordinates SHALL NOT be treated as competing dates.</p><p>They represent different functions.</p><h2 id="a.15.3-machine-identity">A.15.3 Machine identity</h2><p>A machine-readable cross-world Solarian record SHOULD be capable of identifying, at minimum:</p><ol type="1">
+<li><p>the calendar implementation profile;</p></li>
+<li><p>the profile version;</p></li>
+<li><p>the local civil date;</p></li>
+<li><p>the common chronological coordinate where required; and</p></li>
+<li><p>the SWI where weekly interoperability is relevant.</p></li>
+</ol><p>Local cultural names SHALL NOT be the sole machine identity of any structural unit.</p><h2 id="a.15.4-deterministic-conversion">A.15.4 Deterministic conversion</h2><p>A conforming implementation profile intended for institutional use SHALL publish sufficient rules for an independent implementation to convert dates deterministically between:</p><ul>
+<li><p>the local Solarian calendar;</p></li>
+<li><p>common chronology; and</p></li>
+<li><p>SWI where applicable.</p></li>
+</ul><p>Detailed syntax and test vectors are defined by the interoperability specification.</p><h2 id="a.16-conformance-classes">A.16 Conformance classes</h2><h2 id="a.16.1-human-layer-conformant-implementation">A.16.1 Human-layer conformant implementation</h2><p>An implementation is <strong>Solarian Human-Layer Conformant</strong> if it:</p><ul>
+<li><p>uses an uninterrupted seven-position week;</p></li>
+<li><p>uses the A–L twelve-minth mear structure;</p></li>
+<li><p>preserves whole-week minths;</p></li>
+<li><p>uses the standard day or declares a permitted local-day exception; and</p></li>
+<li><p>provides required common-chronology mapping.</p></li>
+</ul><h2 id="a.16.2-standard-synchronized-implementation">A.16.2 Standard synchronized implementation</h2><p>An implementation is a <strong>Standard Synchronized Solarian Implementation</strong> if it:</p><ol type="1">
+<li><p>satisfies A.16.1;</p></li>
+<li><p>provides a twelve-month heliocentric astronomical calendar;</p></li>
+<li><p>uses integer R in accordance with Section A.7;</p></li>
+<li><p>uses whole-week year forms;</p></li>
+<li><p>applies expansion-joint rules in accordance with Section A.8;</p></li>
+<li><p>satisfies the Monday Rule;</p></li>
+<li><p>defines deterministic intercalation; and</p></li>
+<li><p>satisfies the standard orbital-phase fidelity requirement.</p></li>
+</ol><h2 id="a.16.3-standard-independent-implementation">A.16.3 Standard independent implementation</h2><p>An implementation is a <strong>Standard Independent Solarian Implementation</strong> if it:</p><ol type="1">
+<li><p>satisfies A.16.1;</p></li>
+<li><p>provides an independently running twelve-month heliocentric calendar;</p></li>
+<li><p>defines no Repeat Factor;</p></li>
+<li><p>keeps the standard human mear independent of astronomical correction;</p></li>
+<li><p>constructs the astronomical calendar from complete weeks;</p></li>
+<li><p>satisfies the Monday Rule within each hierarchy; and</p></li>
+<li><p>defines deterministic astronomical intercalation; and</p></li>
+<li><p>satisfies the standard orbital-phase fidelity requirement of A.13 and Solarian Orbital-Phase Fidelity Standard 1.0.0. A valid independent chronological year sequence without adequate phase fidelity does not qualify as a Standard Independent astronomical implementation.</p></li>
+</ol><h2 id="a.16.4-specialised-astronomical-implementation">A.16.4 Specialised astronomical implementation</h2><p>An implementation MAY be designated Solarian-Compatible with Specialised Astronomical Implementation where the human layer is conformant but the twelve-month astronomical phase proxy requires specialised treatment under A.13. The independently running chronological orbital-year count and any valid deterministic whole-week dates MAY be retained and separately described.</p><p>The specialised component SHALL be identified explicitly.</p><p>It SHALL NOT represent that specialised phase display as a Standard Synchronized or Standard Independent astronomical implementation, or portray the retained chronological calendar as evidence that the standard phase-fidelity metric has passed.</p><p>An independent implementation can produce unambiguous whole-week astronomical years while retaining a completely separate human operating calendar. That chronological result does not, by itself, establish that the twelve civil orbital-month names represent heliocentric angle adequately. Mercury is a clear example: its 12- and 13-week years remain useful chronological forms, while its twelve-position phase proxy requires specialised astronomical treatment. A compliant implementation must identify that distinction rather than counting chronological validity as a standard astronomical-phase pass.</p><h2 id="a.16.5-human-only-implementation">A.16.5 Human-only implementation</h2><p>A mobile or otherwise non-orbital settlement MAY be designated <strong>Solarian Human-Layer Conformant — No Civil Astronomical Calendar</strong>.</p><h2 id="a.17-implementation-profile-requirements">A.17 Implementation profile requirements</h2><p>Every canonical Solarian implementation profile SHALL declare the following where applicable:</p><table>
+<colgroup>
+<col style="width: 39%"/>
+<col style="width: 60%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Field</strong></th>
+<th><strong>Requirement</strong></th>
+</tr>
+<tr class="odd">
+<th>Profile name</th>
+<th>Required</th>
+</tr>
+<tr class="header">
+<th>Profile identifier</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Profile version</th>
+<th>Required</th>
+</tr>
+<tr class="header">
+<th>Target world/system/habitat</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Civil-day basis</th>
+<th>Required</th>
+</tr>
+<tr class="header">
+<th>Week basis</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>SWI relationship</th>
+<th>Required</th>
+</tr>
+<tr class="header">
+<th>Astronomical target orbit</th>
+<th>Required if astronomical layer exists</th>
+</tr>
+<tr class="odd">
+<th>λ₀ realisation/reference data</th>
+<th>Required if astronomical layer exists</th>
+</tr>
+<tr class="header">
+<th>Implementation regime</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Repeat Factor</th>
+<th>Required if synchronized; absent if independent</th>
+</tr>
+<tr class="header">
+<th>Orbital-month identifiers</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Local/reference naming aliases</th>
+<th>Optional but recommended</th>
+</tr>
+<tr class="header">
+<th>Common Year length</th>
+<th>Required if applicable</th>
+</tr>
+<tr class="odd">
+<th>Leap Year length</th>
+<th>Required if applicable</th>
+</tr>
+<tr class="header">
+<th>Intercalation rule</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Expansion-joint locations</th>
+<th>Required for synchronized profiles</th>
+</tr>
+<tr class="header">
+<th>Orbital-month week pattern</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Local era/year numbering</th>
+<th>Required if used</th>
+</tr>
+<tr class="header">
+<th>Common chronology mapping</th>
+<th>Required</th>
+</tr>
+<tr class="odd">
+<th>Astronomical validation status</th>
+<th>Required where astronomical layer exists: declared phase result and disposition; evaluation interval; physical target/frame; ephemeris/version/hash; month-boundary ledger and layout version; maximum angular deviation; uncertainty and unresolved certification gates.</th>
+</tr>
+<tr class="header">
+<th>Specialised deviations</th>
+<th>Required where applicable</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table><p>An implementation SHALL NOT be considered fully deterministic until all fields necessary to reproduce future and historical dates have been specified.</p><h2 id="a.18-versioning-and-stability">A.18 Versioning and stability</h2><h2 id="a.18.1-protocol-version">A.18.1 Protocol version</h2><p>This document defines:</p><blockquote>
+<p><strong>Solarian Protocol v1.0</strong></p>
+</blockquote><p>The protocol version and individual implementation-profile versions SHALL be maintained separately.</p><p>A change to one planetary profile SHALL NOT automatically change the core protocol version.</p><h2 id="a.18.2-backwards-compatibility">A.18.2 Backwards compatibility</h2><p>Published historical dates SHALL be treated as durable civil records.</p><p>Future protocol or profile revisions SHOULD preserve deterministic interpretation of dates generated under earlier versions.</p><p>A revision SHALL NOT silently reinterpret an existing historical date.</p><h2 id="a.18.3-reference-data-updates">A.18.3 Reference-data updates</h2><p>Astronomical reference data MAY improve over time.</p><p>Implementation profiles SHALL define how updated orbital models affect future calendar generation without invalidating historical records.</p><h2 id="a.18.4-extensions">A.18.4 Extensions</h2><p>Future extensions MAY introduce additional profile classes, specialised astronomical representations or implementation metadata.</p><p>An extension SHALL NOT silently alter the meaning of:</p><ul>
+<li><p>civil day;</p></li>
+<li><p>week;</p></li>
+<li><p>minth;</p></li>
+<li><p>mear;</p></li>
+<li><p>orbital month;</p></li>
+<li><p>orbital year;</p></li>
+<li><p>Repeat Factor;</p></li>
+<li><p>Common Year;</p></li>
+<li><p>Leap Year; or</p></li>
+<li><p>SWI</p></li>
+</ul><p>without a new major protocol version.</p><h2 id="a.19-normative-summary">A.19 Normative summary</h2><p>A conforming Solarian implementation follows the following core rules.</p><p><strong>Human time</strong></p><blockquote>
+<p><strong>7 civil days = 1 week<br/>
+4 weeks = 1 normal minth<br/>
+12 minths = 1 mear</strong></p>
+</blockquote><p>Minths use structural identities <strong>A–L</strong>.</p><p>The week is continuous and is never broken.</p><p><strong>Astronomical time</strong></p><blockquote>
+<p><strong>12 orbital months = 1 heliocentric year</strong></p>
+</blockquote><p>Standard astronomical calendars share:</p><blockquote>
+<p><strong>λ₀ = 100°</strong></p>
+</blockquote><p>as their common year-start reference direction.</p><p><strong>Synchronized regime</strong></p><blockquote>
+<p><strong>R = minths per orbital month = mears per orbital year</strong></p>
+</blockquote><p>R is always a positive integer.</p><p>No fractional Repeat Factor is permitted.</p><p><strong>Independent regime</strong></p><p>The human and astronomical calendars run separately.</p><p>The human mear normally remains exactly forty-eight weeks.</p><p>No Repeat Factor is defined.</p><p><strong>Intercalation</strong></p><p>Calendar correction occurs in complete weeks.</p><p>In synchronized calendars:</p><blockquote>
+<p><strong>Minth L is the primary expansion joint.</strong></p>
+</blockquote><p>Secondary expansion joints are permitted only where primary capacity is insufficient or an implementation profile requires additional controlled distribution.</p><p><strong>Year terminology</strong></p><blockquote>
+<p><strong>Even number of weeks = Common Year<br/>
+Odd number of weeks = Leap Year</strong></p>
+</blockquote><p>Leap identifies parity, not greater length.</p><p><strong>Boundary rule</strong></p><p>Every minth, mear, orbital month and orbital year begins on the first structural weekday.</p><p>In reference terminology:</p><blockquote>
+<p><strong>Every major boundary begins on Monday.</strong></p>
+</blockquote><p><strong>Shared week coordinate</strong></p><blockquote>
+<p><strong>SWI 1 begins Monday, 10 April 1961.</strong></p>
+</blockquote><p>Standard-day settlements share the SWI directly.</p><p>Non-standard-day settlements map to it through common chronology.</p><p><strong>Cultural principle</strong></p><blockquote>
+<p><strong>Common structure; local culture.</strong></p>
+</blockquote><p>Local societies may name and interpret their calendars as they choose, provided the common structural identities and conversion rules remain available underneath.</p><p><strong>Applicability principle</strong></p><p>The standard astronomical layer is allowed to fail.</p><p>Where the standard twelve-month representation exceeds the 45° maximum phase-deviation threshold, the implementation SHALL declare specialised astronomical treatment rather than redefining the protocol to conceal the failure. A result above 30° and up to and including 45° SHALL instead be recorded for individual marginal review; it is neither an automatic standard-phase pass nor a mandatory specialised outcome. The civil week, minth, mear and physical orbital year remain unaffected.</p><h2 id="a.20-protocol-statement">A.20 Protocol statement</h2><p>Solarian does not require the Solar System to share one calendar.</p><p>It requires locally different calendars to share enough structure to remain mutually intelligible.</p><p>The mear belongs to operations and people.</p><p>The year belongs to the orbit and planet.</p><p>The week provides the recurring human foundation.</p><p>The Solarian Week Index provides the shared weekly coordinate.</p><p>The protocol standardises the grammar.</p><p>The people who inhabit each world provide the culture.</p><span aria-hidden="true" class="anchor-target" id="section-41"></span></article></div><div class="reader-actions"><button class="bookmark" data-bookmark="book/read/39-appendix-a-solarian-protocol-v1-0.html" type="button">☆ Save reading position</button><button aria-label="Increase text size" class="reading-size" data-font-up="" type="button">Aa +</button><button aria-label="Decrease text size" class="reading-size" data-font-down="" type="button">Aa −</button></div><nav aria-label="Adjacent sections" class="reader-pager"><a class="pager-link prev" href="38-appendices.html"><span class="pager-label">← PREVIOUS</span><strong>Appendices</strong></a><a class="pager-link next" href="40-appendix-b-mathematical-basis-calendar-selection.html"><span class="pager-label">NEXT →</span><strong>Appendix B - Mathematical Basis &amp; Calendar Selection</strong></a></nav></div></main><footer class="site-footer"><div class="footer-inner"><div><div class="footer-logo">SOLARIAN<span class="gold">.</span></div><p>One grammar. Many calendars.</p><small>Book text and artwork © JB Bullock 2026. All rights reserved.</small></div><div class="footer-links"><a href="../../book/index.html">Book</a><a href="../../figures/index.html">Figures</a><a href="../../protocol/index.html">Protocol</a><a href="../../rights/index.html">Rights &amp; licensing</a></div></div><div class="footer-base">First Public Web Edition 1.0 · October 2026 · Book and original illustrations © JB Bullock 2026.</div></footer></body></html>
